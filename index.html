@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <!-- Modern Normalize -->
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v2.0.0
+      /modern-normalize.min.css" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <title>Vite App</title>
+  </head>
+
+  <body>
+
+    <nav>
+      <div class="container nav">
+
+        <a class="nav__logo" href="#">Logo</a>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#meet">Shop</a></li>
+          <li class="nav__item"><a class="nav__link" href="#testimonials">Contact</a></li>
+          <li class="nav__item"><a class="nav__link" href="#schedule">About Us</a></li>
+        </ul>
+
+        <div class="nav__buttons-wrapper">
+          <a class="button" href="#" onclick="event.preventDefault();">Sign Up</a>
+        </div>
+        
+
+        <button class="nav__toggle-button" id="nav__toggle-open" type="button"><i class="ri-menu-line"></i>
+        </button>
+        <button class="nav__toggle-button" id="nav__toggle-close" type="button"><i class="ri-close-line"></i>
+        </button>
+
+      </div>
+    </nav>
+
+    <header id="header">
+
+      <div class="container header">
+
+        <div class="header__text-wrapper">
+          <p class="header__offer">Up to 50% off all games for this month only</p>
+          <h1 class="header__title">Discover Your Favorite Online Gaming Platform</h1>
+          <p class="header__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <a class="button" href="#" onclick="event.preventDefault();">Shop Now</a>
+
+      </div>
+
+    </header>
+
+    <main>
+
+      <section id="platform">
+
+        <div class="container platform">
+
+          <div class="platform__text-wrapper">
+            <h2 class="platform__title">A Platform for Gamers</h2>
+            <p class="platform__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit.
+            </p>
+          </div>
+
+          <div class="platform__card-wrapper">
+
+            <article class="platform__card">
+              <img class="platform__card-image" src="./images/witcher-3.jpg" alt="image">
+              <h3 class="platform__card-title">Witcher 3</h3>
+              <p class="platform__card-description">
+                Lorem ipsum dolor sit amet</p>
+            </article>
+
+            <article class="platform__card">
+              <img class="platform__card-image" src="./images/apex.jpg" alt="image">
+              <h3 class="platform__card-title">Apex Legends</h3>
+              <p class="platform__card-description">
+                Lorem ipsum dolor sit amet</p>
+            </article>
+
+            <article class="platform__card">
+              <img class="platform__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="platform__card-title">Lies of P</h3>
+              <p class="platform__card-description">
+                Lorem ipsum dolor sit amet</p>
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="browse">
+
+        <div class="container browse">
+
+          <div class="browse__text-wrapper">
+            <h2 class="browse__title">Browse By Catagory</h2>
+
+            <div class="button-wrapper">
+              <a class="button" href="#" onclick="event.preventDefault();">View All</a>
+            </div>
+
+          </div>
+
+          <div class="browse__card-wrapper">
+
+            <article class="browse__card">
+              <img class="browse__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="browse__card-title">Adventure</h3>
+            </article>
+
+            <article class="browse__card">
+              <img class="browse__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="browse__card-title">FPS</h3>
+            </article>
+
+            <article class="browse__card">
+              <img class="browse__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="browse__card-title">RPG</h3>
+            </article>
+
+            <article class="browse__card">
+              <img class="browse__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="browse__card-title">Souls Like</h3>
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="featured">
+
+        <div class="container featured">
+
+          <div class="featured__text-wrapper">
+
+            <h2 class="featured__title">Featured</h2>
+
+            <div class="featured__tab-wrapper">
+              <a class="featured__tab" href="#">News & Trending</a>
+              <a class="featured__tab" href="#">Popular</a>
+              <a class="featured__tab" href="#">Top Rated</a>
+              <a class="featured__tab" href="#">Upcoming</a>
+            </div>
+
+          </div>
+
+          <div class="featured__card-wrapper">
+
+            <article class="featured__card">
+              <img class="featured__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="featured__card-title">Witcher 3<br><span>Lorem ipsum dolor sit</span></h3>
+              <p class="featured__card-rating">★★★★★</p>
+              <p class="featured__card-description">Description<br><span>Lorem ipsum dolor sit</span></p>
+              <a class="button" href="#" onclick="event.preventDefault();">Play Now</a>
+            </article>
+
+            <article class="featured__card">
+
+              <img class="featured__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="featured__card-title">Witcher 3<br><span>Lorem ipsum dolor sit</span></h3>
+              <p class="featured__card-rating">★★★★★</p>
+              <p class="featured__card-description">Description<br><span>Lorem ipsum dolor sit</span></p>
+
+              <a class="button" href="#" onclick="event.preventDefault();">Play Now</a>
+
+            </article>
+
+            <article class="featured__card">
+
+              <img class="featured__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="featured__card-title">Witcher 3<br><span>Lorem ipsum dolor sit</span></h3>
+              <p class="featured__card-rating">★★★★★</p>
+              <p class="featured__card-description">Description<br><span>Lorem ipsum dolor sit</span></p>
+
+              <a class="button" href="#" onclick="event.preventDefault();">Play Now</a>
+
+            </article>
+
+            <article class="featured__card">
+
+              <img class="featured__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="featured__card-title">Witcher 3<br><span>Lorem ipsum dolor sit</span></h3>
+              <p class="featured__card-rating">★★★★★</p>
+              <p class="featured__card-description">Description<br><span>Lorem ipsum dolor sit</span></p>
+
+              <a class="button" href="#" onclick="event.preventDefault();">Play Now</a>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="looking">
+
+        <div class="container looking">
+
+          <div class="looking__text-wrapper">
+            <h2 class="looking__title">Looking for something?</h2>
+          </div>
+
+          <div class="looking__card-wrapper">
+
+            <article class="looking__card">
+              <img class="looking__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <p class="looking__card-rating">★★★★★</p>
+              <h3 class="looking__card-title">Witcher 3</h3>
+              <p class="looking__card-description">Description</p>
+            </article>
+
+            <article class="looking__card">
+              <img class="looking__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <p class="looking__card-rating">★★★★★</p>
+              <h3 class="looking__card-title">Witcher 3</h3>
+              <p class="looking__card-description">Description</p>
+            </article>
+
+            <article class="looking__card">
+              <img class="looking__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <p class="looking__card-rating">★★★★★</p>
+              <h3 class="looking__card-title">Witcher 3</h3>
+              <p class="looking__card-description">Description</p>
+            </article>
+
+          </div>
+
+          <div class="accordion">
+
+            <div class="accordion__item">
+              <div class="accordion__header">Which Plan is Good for me?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__header">Is there a
+                Subscription?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <div class="accordion__header">Can I use it on
+                all my Devices?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="reason">
+
+        <div class="container reason">
+
+          <div class="reason__text-wrapper">
+            <h2 class="reason__title">Great Reasons To Play</h2>
+            <p class="reason__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.</p>
+            <a class="button" href="#" onclick="event.preventDefault();">Learn More</a>
+          </div>
+
+          <div class="reason__feature-wrapper">
+
+            <article class="reason__feature">
+              <i class="ri-gamepad-line"></i>
+              <h3 class="reason__feature-name">500+ Games</h3>
+            </article>
+
+            <article class="reason__feature">
+              <i class="ri-trophy-line"></i>
+              <h3 class="reason__feature-name">Weekly Tournaments</h3>
+            </article>
+
+            <article class="reason__feature">
+              <i class="ri-trophy-line"></i>
+              <h3 class="reason__feature-name">Version Rollback</h3>
+            </article>
+
+            <article class="reason__feature">
+              <i class="ri-trophy-line"></i>
+              <h3 class="reason__feature-name">Community Rankings</h3>
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="opinions">
+
+        <div class="container opinions">
+
+          <h2 class="opinions__title">What our users say</h2>
+
+          <a class="button" href="#" onclick="event.preventDefault();">View All</a>
+
+          <div class="opinions__card-wrapper">
+
+            <article class="opinions__card">
+
+              <div class="opinions__card-wrapper-2">
+
+                <img class="opinions__card-image" src="./images/lies-of-p.jpg" alt="image">
+
+                <div class="opinions__card-wrapper-3">
+                  <h3 class="opinions__card-name">Jogn Abdullah</h3>
+                  <p class="opinions__card-location">London, UK</p>
+                </div>
+
+                <p class="opinions__card-rating">★★★★★</p>
+
+              </div>
+
+              <p class="opinions__card-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+            </article>
+
+            <article class="opinions__card">
+
+              <div class="opinions__card-wrapper-2">
+
+                <img class="opinions__card-image" src="./images/lies-of-p.jpg" alt="image">
+
+                <div class="opinions__card-wrapper-3">
+                  <h3 class="opinions__card-name">Jogn Abdullah</h3>
+                  <p class="opinions__card-location">London, UK</p>
+                </div>
+
+                <p class="opinions__card-rating">★★★★★</p>
+              </div>
+
+              <p class="opinions__card-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+            </article>
+
+            <article class="opinions__card">
+
+              <div class="opinions__card-wrapper-2">
+
+                <img class="opinions__card-image" src="./images/lies-of-p.jpg" alt="image">
+
+                <div class="opinions__card-wrapper-3">
+                  <h3 class="opinions__card-name">Jogn Abdullah</h3>
+                  <p class="opinions__card-location">London, UK</p>
+                </div>
+
+                <p class="opinions__card-rating">★★★★★</p>
+              </div>
+
+              <p class="opinions__card-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+            </article>
+
+          </div>
+
+      </section>
+
+      <section id="updates">
+
+        <div class="container updates">
+
+          <div class="updates__text-wrapper">
+            <h2 class="updates__title">Developer Updates</h2>
+            <a class="button" href="#" onclick="event.preventDefault();">View All</a>
+          </div>
+
+          <div class="updates__card-wrapper">
+
+            <article class="updates__card">
+              <img class="updates__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="updates__card-title">Lorem ipsum dolor sit amet</h3>
+              <p class="updates__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div class="updates__card-bottom">
+                <a class="button" href="#" onclick="event.preventDefault();">Read More</a>
+                <div class="updates__card-stats">
+                  <i class="ri-heart-fill"></i>
+                  <p>2.1k</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="updates__card">
+              <img class="updates__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="updates__card-title">Lorem ipsum dolor sit amet</h3>
+              <p class="updates__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div class="updates__card-bottom">
+                <a class="button" href="#" onclick="event.preventDefault();">Read More</a>
+                <div class="updates__card-stats">
+                  <i class="ri-heart-fill"></i>
+                  <p>2.1k</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="updates__card">
+              <img class="updates__card-image" src="./images/lies-of-p.jpg" alt="image">
+              <h3 class="updates__card-title">Lorem ipsum dolor sit amet</h3>
+              <p class="updates__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <div class="updates__card-bottom">
+                <a class="button" href="#" onclick="event.preventDefault();">Read More</a>
+                <div class="updates__card-stats">
+                  <i class="ri-heart-fill"></i>
+                  <p>2.1k</p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="newsletter">
+
+        <div class="container newsletter">
+
+          <div class="newsletter__text-wrapper">
+
+            <h2 class="newsletter__title">Subscribe To Our Newsletter</h2>
+            <p class="newsletter__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+            </p>
+
+            <div class="newsletter__input-wrapper">
+              <input class="newsletter__input" type="text" id="email" placeholder="Enter your email">
+              <a class="button">Subscribe</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer id="footer">
+
+      <div class="container footer">
+
+        <a class="footer__logo" href="#">Logo</a>
+
+        <ul class="footer__list-ql">
+          <li class="footer__item"><a class="footer__link" href="#">Home</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Shop</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Contact</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">About Us</a></li>
+        </ul>
+
+        <ul class="footer__list-l">
+          <li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Terms & Conditions</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">Cookie Policy</a></li>
+          <li class="footer__item"><a class="footer__link" href="#">FAQ's</a></li>
+        </ul>
+
+      </div>
+
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+
+  </body>
+
+</html>

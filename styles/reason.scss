@@ -1,0 +1,85 @@
+@import "styles/style.scss";
+
+#reason {
+    position: relative;
+}
+
+.reason {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+        padding: 5rem 0;
+
+    @media (width >= 700px) {
+        padding: 10rem 0;
+    }
+
+    @media (width >= 1000px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @media (width >= 1000px) {
+            width: 60%;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+
+        color: $yellow-dark;
+    }
+
+    &__description {
+    }
+
+    &__feature-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        width: 100%;
+
+        @media (width >= 1000px) {
+            width: 40%;
+        }
+    }
+
+    &__feature {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        border: $border-cyan;
+        padding: 0.5rem 0.25rem;
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            //!border: $border-cyan;
+
+            height: 5rem;
+            width: 5rem;
+
+            font-size: 3.5rem;
+            font-weight: 400;
+
+            color: $cyan;
+        }
+    }
+
+    &__feature-name {
+        font-weight: 600;
+
+        color: $yellow-dark;
+    }
+}

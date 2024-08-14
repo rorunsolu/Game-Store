@@ -1,0 +1,163 @@
+@import "styles/style.scss";
+
+nav {
+    /*Layout*/
+    display: grid;
+    place-items: center;
+
+    /*Positioning*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    /*Dimensions*/
+    height: 5rem;
+    width: 100vw;
+
+    @media (width < 600px) {
+        height: 3.5rem;
+    }
+}
+
+.nav {
+    /*Layout*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*Dimensions*/
+    height: 100%;
+
+    &__logo {
+        /*font*/
+        font-size: 2rem;
+        font-weight: 600;
+
+        /*color*/
+        color: $white;
+
+        @media (width < 600px) {
+            /*Font*/
+            font-size: 1.5rem;
+        }
+    
+    }
+
+    &__list {
+        /*layout*/
+        display: flex;
+        justify-content: space-between;
+
+        position: relative;
+
+        @media (width < 1000px) {
+            /*Layout*/
+            display: none;
+            flex-direction: column;
+            gap: 0;
+
+            /*Positioning*/
+            position: absolute;
+            top: 100%;
+            right: 0;
+
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+        }
+    }
+
+    &__item {
+        /*box model*/
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+
+        @media (width < 1000px) {
+            /*box model*/
+            border-radius: 0;
+            padding: 0;
+
+            /*Dimensions*/
+            height: 5rem;
+        }
+    }
+
+    &__link {
+        /*font*/
+        font-size: 1rem;
+        font-weight: 500;
+
+        color: $white;
+
+        @media (width < 1000px) {
+            /*Layout*/
+            display: flex;
+            align-items: center;
+
+            /*Dimensions*/
+            height: 100%;
+
+            /*Box Model*/
+            padding: 1rem 5rem;
+        }
+
+        &:hover {
+            color: $cyan;
+        }
+    }
+
+    &__buttons-wrapper {
+        /*layout*/
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        @media (width < 1000px) {
+            display: none;
+        }
+
+        a {
+            @media (width < 1000px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.nav__toggle-button {
+    /*Layout*/
+    display: none;
+
+    color: $white;
+
+    @media (width < 1000px) {
+        /*Layout*/
+        display: inline-block;
+
+        /*Background*/
+        background: transparent;
+
+        /*Font*/
+        font-size: 2rem;
+
+        /*Color*/
+        color: hsl(0, 0%, 0%);
+
+        /*Other*/
+        cursor: pointer;
+    }
+}
+
+#nav__toggle-open {
+    color: $white;
+}
+
+#nav__toggle-close {
+    color: $white;
+    @media (width < 1000px) {
+        /*Layout*/
+        display: none;
+    }
+}

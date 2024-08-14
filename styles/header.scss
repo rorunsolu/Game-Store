@@ -1,0 +1,77 @@
+@import "styles/style.scss";
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url("./images/returnal.jpg");
+    background-size: cover;
+    background-position: 90% 0%;
+    background-repeat: no-repeat;
+
+    color: hsl(0, 0%, 100%);
+
+    @media (width <= 1000px) {
+        background-position: 55% 0%;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+
+    @media (width >= 1000px) {
+        padding-top: 22.5rem;
+        padding-bottom: 22.5rem;
+    }
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media (width >= 600px) {
+            width: 80%;
+        }
+
+        @media (width >= 900px) {
+            width: 70%;
+        }
+
+        @media (width >= 1000px) {
+            width: 60%;
+        }
+
+        @media (width >= 1100px) {
+            width: 50%;
+        }
+    }
+
+    &__offer {
+        border: 0.1rem solid $cyan;
+        padding: 0.5rem 1rem;
+
+        width: fit-content;
+
+        backdrop-filter: blur(5px) saturate(180%);
+        -webkit-backdrop-filter: blur(5px) saturate(180%);
+        background-color: rgba(24, 119, 133, 0.75);
+        color: $cyan;
+    }
+    &__title {
+        @media (width >= 800px) {
+            font-size: 2.5rem;
+        }
+
+        @media (width >= 1100px) {
+            font-size: 2.75rem;
+        }
+    }
+    &__description {
+    }
+}

@@ -1,0 +1,259 @@
+$cyan: hsl(178, 100%, 50%);
+$white: hsl(0, 0%, 100%);
+
+$orange-dark: hsl(38, 96%, 39%);
+$yellow-dark: hsl(45, 100%, 50%);
+$grey-light: hsl(0, 0%, 65%);
+
+$border-cyan: 0.1rem solid $cyan;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+
+    background-color: hsl(0, 0%, 4%);
+    color: hsl(0, 0%, 100%);
+
+    display: grid;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    grid-template-rows: auto auto auto auto;
+
+    min-height: 100vh;
+
+    @media (width <= 600px) {
+        grid-template-rows: 3.5rem auto auto auto;
+    }
+}
+
+nav {
+    grid-area: nav;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas:
+        "platform platform platform"
+        "browse browse browse"
+        "featured featured featured"
+        "looking looking looking"
+        "reason reason reason"
+        "opinions opinions opinions"
+        "updates updates updates"
+        "newsletter newsletter newsletter";
+    grid-template-rows: auto;
+}
+
+#platform {
+    grid-area: platform;
+
+    border-image: linear-gradient(to right, transparent, $cyan, transparent) 1;
+    border-bottom: $border-cyan;
+}
+
+#browse {
+    grid-area: browse;
+
+    border-image: linear-gradient(to right, transparent, $cyan, transparent) 1;
+    border-top: 0.2rem solid $cyan;
+    border-bottom: $border-cyan;
+}
+
+#featured {
+    grid-area: featured;
+
+    border-image: linear-gradient(to right, transparent, $cyan, transparent) 1;
+    border-top: 0.2rem solid $cyan;
+    border-bottom: $border-cyan;
+}
+
+#looking {
+    grid-area: looking;
+
+    border-image: linear-gradient(to right, transparent, $cyan, transparent) 1;
+    border-top: 0.2rem solid $cyan;
+    border-bottom: $border-cyan;
+}
+
+#reason {
+    grid-area: reason;
+
+    border-image: linear-gradient(to right, transparent, $cyan, transparent) 1;
+    border-top: 0.2rem solid $cyan;
+    border-bottom: $border-cyan;
+}
+
+#opinions {
+    grid-area: opinions;
+
+    border-image: linear-gradient(to right, transparent, $cyan, transparent) 1;
+    border-top: 0.2rem solid $cyan;
+    border-bottom: $border-cyan;
+}
+
+#updates {
+    grid-area: updates;
+
+    border-image: linear-gradient(to right, transparent, $cyan, transparent) 1;
+    border-top: 0.2rem solid $cyan;
+    border-bottom: $border-cyan;
+}
+
+#newsletter {
+    grid-area: newsletter;
+}
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+    font-size: 1.75rem;
+
+    @media (width >= 600px) {
+        font-size: 2rem;
+    }
+
+    @media (width >= 1000px) {
+        font-size: 2.5rem;
+    }
+
+    @media (width >= 1200px) {
+        font-size: 2.75rem;
+    }
+}
+
+h3 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+    font-size: 1.25rem;
+
+    @media (width >= 500px) {
+        font-size: 1.5rem;
+    }
+}
+
+p {
+    font-size: 0.8rem;
+
+    @media (width >= 500px) {
+        font-size: 1rem;
+    }
+}
+
+a {
+    cursor: pointer;
+}
+
+img {
+    display: inline;
+    object-fit: cover;
+    object-position: center;
+
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+
+    margin: 0 auto;
+    max-width: 1800px;
+
+    position: relative;
+
+    @media (width >= 400px) {
+        width: 90%;
+    }
+
+    @media (width >= 600px) {
+        width: 80%;
+    }
+}
+
+.window-scrolled {
+    //!border-bottom: 0.1rem solid hsl(0, 0%, 100%);
+    border-bottom: $border-cyan;
+
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    box-sizing: content-box;
+
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
+}
+
+.button {
+    border: $border-cyan;
+    padding: 0.75rem 1.25rem;
+
+    width: fit-content;
+
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(24, 119, 133, 0.75);
+    color: $cyan;
+
+    font-weight: 500;
+
+    &:hover {
+        color: $yellow-dark;
+        border-color: $yellow-dark;
+        transition: all 100ms ease;
+    }
+}
+
+.accordion {
+    @media (width >= 1000px) {
+        grid-area: question;
+    }
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}

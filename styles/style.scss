@@ -40,10 +40,6 @@ body {
     grid-template-rows: auto auto auto auto;
 
     min-height: 100vh;
-
-    @media (width <= 600px) {
-        grid-template-rows: 3.5rem auto auto auto;
-    }
 }
 
 nav {

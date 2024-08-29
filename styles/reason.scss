@@ -37,9 +37,6 @@
         color: $yellow-dark;
     }
 
-    &__description {
-    }
-
     &__feature-wrapper {
         display: flex;
         flex-direction: column;
@@ -64,8 +61,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            //!border: $border-cyan;
 
             height: 5rem;
             width: 5rem;

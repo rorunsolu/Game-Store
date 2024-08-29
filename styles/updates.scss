@@ -45,9 +45,6 @@
         padding: 1rem;
     }
 
-    &__card-title {
-    }
-
     &__card-bottom {
         display: flex;
         align-items: center;
@@ -59,9 +56,9 @@
         gap: 0.5rem;
 
         i {
-            color: $yellow-dark;
-
             font-size: 1rem;
+
+            color: $yellow-dark;
         }
     }
 }

@@ -1,8 +1,5 @@
 @import "styles/style.scss";
 
-#opinions {
-}
-
 .opinions {
     display: flex;
     flex-direction: column;
@@ -59,10 +56,6 @@
         padding: 2rem;
 
         min-height: 15rem;
-
-        &:nth-child(3) {
-            //!
-        }
     }
     &__card-image {
         border-radius: 100%;
@@ -99,7 +92,5 @@
     }
     &__card-rating {
         color: $yellow-dark;
-    }
-    &__card-statement {
     }
 }

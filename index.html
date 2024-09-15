@@ -19,7 +19,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
 
     <title>Vite App</title>
   </head>
@@ -27,7 +28,7 @@
   <body>
 
     <nav>
-      <div class="container nav">
+      <div class="nav-container nav">
 
         <a class="nav__logo" href="#">Logo</a>
 
@@ -39,9 +40,9 @@
         </ul>
 
         <div class="nav__buttons-wrapper">
-          <a class="button" href="#" onclick="event.preventDefault();">Sign Up</a>
+          <a class="button" href="#" target="_blank">Sign Up</a>
         </div>
-        
+
 
         <button class="nav__toggle-button" id="nav__toggle-open" type="button"><i class="ri-menu-line"></i>
         </button>
@@ -55,15 +56,13 @@
 
       <div class="container header">
 
-        <div class="header__text-wrapper">
-          <p class="header__offer">Up to 50% off all games for this month only</p>
-          <h1 class="header__title">Discover Your Favorite Online Gaming Platform</h1>
-          <p class="header__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+        <p class="header__offer">Up to 50% off all games for this month only</p>
+        <h1 class="header__title">Discover The Best Gaming Platform</h1>
+        <p class="header__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.</p>
 
-        <a class="button" href="#" onclick="event.preventDefault();">Shop Now</a>
+        <a class="button" href="#" target="_blank">Shop Now</a>
 
       </div>
 
@@ -85,71 +84,7 @@
             </p>
           </div>
 
-          <div class="platform__card-wrapper">
-
-            <article class="platform__card">
-              <img class="platform__card-image" src="./images/witcher-3.jpg" alt="image">
-              <h3 class="platform__card-title">Witcher 3</h3>
-              <p class="platform__card-description">
-                Lorem ipsum dolor sit amet</p>
-            </article>
-
-            <article class="platform__card">
-              <img class="platform__card-image" src="./images/apex.jpg" alt="image">
-              <h3 class="platform__card-title">Apex Legends</h3>
-              <p class="platform__card-description">
-                Lorem ipsum dolor sit amet</p>
-            </article>
-
-            <article class="platform__card">
-              <img class="platform__card-image" src="./images/lies-of-p.jpg" alt="image">
-              <h3 class="platform__card-title">Lies of P</h3>
-              <p class="platform__card-description">
-                Lorem ipsum dolor sit amet</p>
-            </article>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <section id="browse">
-
-        <div class="container browse">
-
-          <div class="browse__text-wrapper">
-            <h2 class="browse__title">Browse By Catagory</h2>
-
-            <div class="button-wrapper">
-              <a class="button" href="#" onclick="event.preventDefault();">View All</a>
-            </div>
-
-          </div>
-
-          <div class="browse__card-wrapper">
-
-            <article class="browse__card">
-              <img class="browse__card-image" src="./images/landscape (2).jpg" alt="image">
-              <h3 class="browse__card-title">Adventure</h3>
-            </article>
-
-            <article class="browse__card">
-              <img class="browse__card-image" src="./images/landscape (3).jpg" alt="image">
-              <h3 class="browse__card-title">FPS</h3>
-            </article>
-
-            <article class="browse__card">
-              <img class="browse__card-image" src="./images/landscape.jpg" alt="image">
-              <h3 class="browse__card-title">RPG</h3>
-            </article>
-
-            <article class="browse__card">
-              <img class="browse__card-image" src="./images/landscape (4).jpg" alt="image">
-              <h3 class="browse__card-title">Souls Like</h3>
-            </article>
-
-          </div>
+          <img class="platform__image" src="./images/game-setup.jpg" alt="gaming setup">
 
         </div>
 
@@ -176,43 +111,148 @@
 
             <article class="featured__card">
               <img class="featured__card-image" src="./images/elden-ring.jpg" alt="image">
-              <h3 class="featured__card-title">Elden Ring<br><span>Lorem ipsum dolor sit</span></h3>
+              <h3 class="featured__card-title">Elden Ring</h3>
               <p class="featured__card-rating">★★★★★</p>
-              <p class="featured__card-description">Description<br><span>Lorem ipsum dolor sit</span></p>
-              <a class="button" href="#" onclick="event.preventDefault();">Play Now</a>
+              <p class="featured__card-description">RPG, Soulsborne, Open World</p>
+              <a class="button" href="#" target="_blank">Play Now</a>
             </article>
 
             <article class="featured__card">
 
               <img class="featured__card-image" src="./images/sekiro.jpg" alt="image">
-              <h3 class="featured__card-title">Sekiro<br><span>Lorem ipsum dolor sit</span></h3>
+              <h3 class="featured__card-title">Sekiro</h3>
               <p class="featured__card-rating">★★★★★</p>
-              <p class="featured__card-description">Description<br><span>Lorem ipsum dolor sit</span></p>
+              <p class="featured__card-description">Soulsborne, Single Player, Action</p>
 
-              <a class="button" href="#" onclick="event.preventDefault();">Play Now</a>
+              <a class="button" href="#" target="_blank">Play Now</a>
 
             </article>
 
             <article class="featured__card">
 
               <img class="featured__card-image" src="./images/helldivers-2.jpg" alt="image">
-              <h3 class="featured__card-title">Helldivers 2<br><span>Lorem ipsum dolor sit</span></h3>
+              <h3 class="featured__card-title">Helldivers 2</h3>
               <p class="featured__card-rating">★★★★★</p>
-              <p class="featured__card-description">Description<br><span>Lorem ipsum dolor sit</span></p>
+              <p class="featured__card-description">Multiplayer, Live Service, PvE</p>
 
-              <a class="button" href="#" onclick="event.preventDefault();">Play Now</a>
+              <a class="button" href="#" target="_blank">Play Now</a>
 
             </article>
 
             <article class="featured__card">
 
               <img class="featured__card-image" src="./images/horizon.jpeg" alt="image">
-              <h3 class="featured__card-title">Horizon Zero Dawn<br><span>Lorem ipsum dolor sit</span></h3>
+              <h3 class="featured__card-title">Horizon Zero dawn</h3>
               <p class="featured__card-rating">★★★★★</p>
-              <p class="featured__card-description">Description<br><span>Lorem ipsum dolor sit</span></p>
+              <p class="featured__card-description">Open World, Female Protagonist</p>
 
-              <a class="button" href="#" onclick="event.preventDefault();">Play Now</a>
+              <a class="button" href="#" target="_blank">Play Now</a>
 
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="browse">
+
+        <div class="container browse">
+
+          <div class="browse__text-wrapper">
+            <h2 class="browse__title">Browse By Catagory</h2>
+
+            <div class="button-wrapper">
+              <a class="button" href="#" target="_blank">View All</a>
+            </div>
+
+          </div>
+
+          <div class="browse__card-wrapper">
+
+            <article class="browse__card">
+              <h3 class="browse__card-title">Adventure</h3>
+              <div class="browse__card-list">
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/returnal-icon.png"
+                       alt="image of the game Returnal">Returnal</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/fo4-icon.png"
+                       alt="image of the game Returnal">Fallout 4</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/rdr2-icon.png"
+                       alt="image of the game Returnal">Red Dead Redemption 2</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/hzd-icon.png"
+                       alt="image of the game Returnal">Horizon Zero Dawn</div>
+              </div>
+            </article>
+
+            <article class="browse__card">
+              <h3 class="browse__card-title">FPS</h3>
+              <div class="browse__card-list">
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/hzd-icon.png"
+                       alt="image of the game Returnal">Call of Duty: Modern Warfare</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/overwatch-icon.png"
+                       alt="image of the game Returnal">Overwatch</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/doom-icon.png"
+                       alt="image of the game Returnal">DOOM Eternal</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/bf5-icon.png"
+                       alt="image of the game Returnal">Battlefield V</div>
+              </div>
+            </article>
+
+            <article class="browse__card">
+              <h3 class="browse__card-title">RPG</h3>
+              <div class="browse__card-list">
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/witcher-3-icon.png"
+                       alt="image of the game Returnal">The Witcher 3: Wild Hunt</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/ff-icon.png"
+                       alt="image of the game Returnal">Final Fantasy VII Remake</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/ds3-icon.jpg"
+                       alt="image of the game Returnal">Dark Souls III</div>
+                <div class="browse__card-item"><img class="browse__card-image" src="/images/persona-icon.png"
+                       alt="image of the game Returnal">Persona 5</div>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section id="reason">
+
+        <div class="container reason">
+
+          <div class="reason__text-wrapper">
+            <h2 class="reason__title">Great Reasons To Play</h2>
+            <p class="reason__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris
+              nisi ut aliquip ex ea commodo consequat.</p>
+            <a class="button" href="#" target="_blank">Learn More</a>
+          </div>
+
+          <div class="reason__feature-wrapper">
+
+            <article class="reason__feature">
+              <div class="reason__feature-icon-wrapper"><i class="ri-gamepad-line"></i></div>
+              <h3 class="reason__feature-name">500+ Games</h3>
+            </article>
+
+            <article class="reason__feature">
+              <div class="reason__feature-icon-wrapper"><i class="ri-gamepad-line"></i></div>
+              <h3 class="reason__feature-name">Weekly Tournaments</h3>
+            </article>
+
+            <article class="reason__feature">
+              <div class="reason__feature-icon-wrapper"><i class="ri-gamepad-line"></i></div>
+              <h3 class="reason__feature-name">Version Rollback</h3>
+            </article>
+
+            <article class="reason__feature">
+              <div class="reason__feature-icon-wrapper"><i class="ri-gamepad-line"></i></div>
+              <h3 class="reason__feature-name">Community Rankings</h3>
             </article>
 
           </div>
@@ -259,7 +299,13 @@
             <div class="accordion__item">
               <div class="accordion__header">Which Plan is Good for me?</div>
               <div class="accordion__body">
-                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed auctor
+                  nulla, sit amet porta
+                  massa. Phasellus efficitur, metus a ultrices mollis, sapien massa eleifend magna, nec faucibus nunc
+                  justo
+                  ac lectus. Aenean
+                  et ipsum in sapien semper imperdiet. Sed at nulla auctor, vestibulum nunc ut, tincidunt velit. Nulla
+                  facilisi.</div>
               </div>
             </div>
 
@@ -267,7 +313,15 @@
               <div class="accordion__header">Is there a
                 Subscription?</div>
               <div class="accordion__body">
-                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed auctor
+                  nulla, sit amet porta
+                  massa. Phasellus efficitur, metus a ultrices mollis, sapien massa eleifend magna, nec faucibus nunc
+                  justo
+                  ac lectus. Aenean
+                  et ipsum in sapien semper imperdiet. Sed at nulla auctor, vestibulum nunc ut, tincidunt velit. Nulla
+                  facilisi. Sed
+                  sed leo
+                  euismod, vestibulum nunc ut, tincidunt velit. Nulla facilisi.</div>
               </div>
             </div>
 
@@ -275,68 +329,27 @@
               <div class="accordion__header">Can I use it on
                 all my Devices?</div>
               <div class="accordion__body">
-                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                <div class="accordion__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed auctor
+                  nulla, sit amet porta
+                  massa. Phasellus efficitur, metus a ultrices mollis, sapien massa eleifend magna, nec faucibus nunc
+                  justo
+                </div>
+
               </div>
+
             </div>
 
           </div>
 
-        </div>
-
       </section>
 
-      <section id="reason">
-
-        <div class="container reason">
-
-          <div class="reason__text-wrapper">
-            <h2 class="reason__title">Great Reasons To Play</h2>
-            <p class="reason__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum
-              dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum.</p>
-            <a class="button" href="#" onclick="event.preventDefault();">Learn More</a>
-          </div>
-
-          <div class="reason__feature-wrapper">
-
-            <article class="reason__feature">
-              <i class="ri-gamepad-line"></i>
-              <h3 class="reason__feature-name">500+ Games</h3>
-            </article>
-
-            <article class="reason__feature">
-              <i class="ri-trophy-line"></i>
-              <h3 class="reason__feature-name">Weekly Tournaments</h3>
-            </article>
-
-            <article class="reason__feature">
-              <i class="ri-trophy-line"></i>
-              <h3 class="reason__feature-name">Version Rollback</h3>
-            </article>
-
-            <article class="reason__feature">
-              <i class="ri-trophy-line"></i>
-              <h3 class="reason__feature-name">Community Rankings</h3>
-            </article>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <section id="opinions">
+      <!-- <section id="opinions">
 
         <div class="container opinions">
 
           <h2 class="opinions__title">What our users say</h2>
 
-          <a class="button" href="#" onclick="event.preventDefault();">View All</a>
+          <a class="button" href="#" target="_blank">View All</a>
 
           <div class="opinions__card-wrapper">
 
@@ -344,19 +357,20 @@
 
               <div class="opinions__card-wrapper-2">
 
-                <img class="opinions__card-image" src="./images/lies-of-p.jpg" alt="image">
+                <img class="opinions__card-image" src="./images/person-3.jpg" alt="image">
 
                 <div class="opinions__card-wrapper-3">
-                  <h3 class="opinions__card-name">Jogn Abdullah</h3>
-                  <p class="opinions__card-location">London, UK</p>
+                  <h3 class="opinions__card-name">Amine</h3>
+                  <p class="opinions__card-location">Paris, France</p>
                 </div>
 
                 <p class="opinions__card-rating">★★★★★</p>
 
               </div>
 
-              <p class="opinions__card-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p class="opinions__card-statement">I've been playing games for years, but this is the first time I've
+                ever
+                felt like I'm part of a community. Thanks for everything!</p>
 
             </article>
 
@@ -364,43 +378,43 @@
 
               <div class="opinions__card-wrapper-2">
 
-                <img class="opinions__card-image" src="./images/lies-of-p.jpg" alt="image">
+                <img class="opinions__card-image" src="./images/person-2.jpg" alt="image">
 
                 <div class="opinions__card-wrapper-3">
-                  <h3 class="opinions__card-name">Jogn Abdullah</h3>
-                  <p class="opinions__card-location">London, UK</p>
+                  <h3 class="opinions__card-name">Joshua</h3>
+                  <p class="opinions__card-location">New York, USA</p>
                 </div>
 
                 <p class="opinions__card-rating">★★★★★</p>
               </div>
 
-              <p class="opinions__card-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p class="opinions__card-statement">I've tried other game stores before, but none of them compare to this
+                one. The community is so friendly and helpful. Thanks!</p>
 
             </article>
 
-            <article class="opinions__card">
+            <article class="opinions__card opinions__card--different">
 
               <div class="opinions__card-wrapper-2">
 
-                <img class="opinions__card-image" src="./images/lies-of-p.jpg" alt="image">
+                <img class="opinions__card-image" src="./images/person-5.jpg" alt="image">
 
                 <div class="opinions__card-wrapper-3">
-                  <h3 class="opinions__card-name">Jogn Abdullah</h3>
-                  <p class="opinions__card-location">London, UK</p>
+                  <h3 class="opinions__card-name">Alicia</h3>
+                  <p class="opinions__card-location">London, England</p>
                 </div>
 
-                <p class="opinions__card-rating">★★★★★</p>
+                <p class="opinions__card-rating">★★★★</p>
               </div>
 
-              <p class="opinions__card-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p class="opinions__card-statement">The support is top-notch and the staff is always helpful. Thanks for
+                everything!</p>
 
             </article>
 
           </div>
 
-      </section>
+      </section> -->
 
       <section id="updates">
 
@@ -408,18 +422,34 @@
 
           <div class="updates__text-wrapper">
             <h2 class="updates__title">Developer Updates</h2>
-            <a class="button" href="#" onclick="event.preventDefault();">View All</a>
+            <a class="button" href="#" target="_blank">View All</a>
           </div>
 
           <div class="updates__card-wrapper">
 
             <article class="updates__card">
-              <img class="updates__card-image" src="./images/lies-of-p.jpg" alt="image">
-              <h3 class="updates__card-title">Lorem ipsum dolor sit amet</h3>
-              <p class="updates__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <img class="updates__card-image" src="./images/4090-gpu.jpg" alt="image">
+              <h3 class="updates__card-title">Path Tracing Enabled Games</h3>
+              <p class="updates__card-text">Experience the cutting-edge visuals in games with path tracing, offering
+                unprecedented
+                lighting realism and enhanced reflections.</p>
               <div class="updates__card-bottom">
-                <a class="button" href="#" onclick="event.preventDefault();">Read More</a>
+                <a class="button" href="#" target="_blank">Read More</a>
+                <div class="updates__card-stats">
+                  <i class="ri-heart-fill"></i>
+                  <p>3.1k</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="updates__card">
+              <img class="updates__card-image" src="./images/unreal-engine.jpg" alt="image">
+              <h3 class="updates__card-title">The Future of Graphical Fidelity</h3>
+              <p class="updates__card-text">Discover how advancements in rendering technologies, such as Unreal Engine
+                5, are
+                pushing the boundaries of realism in gaming and beyond.</p>
+              <div class="updates__card-bottom">
+                <a class="button" href="#" target="_blank">Read More</a>
                 <div class="updates__card-stats">
                   <i class="ri-heart-fill"></i>
                   <p>2.1k</p>
@@ -429,28 +459,15 @@
 
             <article class="updates__card">
               <img class="updates__card-image" src="./images/lies-of-p.jpg" alt="image">
-              <h3 class="updates__card-title">Lorem ipsum dolor sit amet</h3>
-              <p class="updates__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <h3 class="updates__card-title">Lies of P - The Greatest Game ever?</h3>
+              <p class="updates__card-text">Explore the hype around Lies of P, a thrilling and challenging game that has
+                captivated
+                players with its unique storytelling and intense gameplay.</p>
               <div class="updates__card-bottom">
-                <a class="button" href="#" onclick="event.preventDefault();">Read More</a>
+                <a class="button" href="#" target="_blank">Read More</a>
                 <div class="updates__card-stats">
                   <i class="ri-heart-fill"></i>
-                  <p>2.1k</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="updates__card">
-              <img class="updates__card-image" src="./images/lies-of-p.jpg" alt="image">
-              <h3 class="updates__card-title">Lorem ipsum dolor sit amet</h3>
-              <p class="updates__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              <div class="updates__card-bottom">
-                <a class="button" href="#" onclick="event.preventDefault();">Read More</a>
-                <div class="updates__card-stats">
-                  <i class="ri-heart-fill"></i>
-                  <p>2.1k</p>
+                  <p>6.1k</p>
                 </div>
               </div>
             </article>
@@ -465,17 +482,15 @@
 
         <div class="container newsletter">
 
-          <div class="newsletter__text-wrapper">
+          <h2 class="newsletter__title">Subscribe To Our Newsletter</h2>
+          <p class="newsletter__description">
+            Stay up to date with the latest news, promotions and discounts from our store. Don't miss out on
+            the best deals and newest games. Subscribe now and get 10% off on your first purchase.
+          </p>
 
-            <h2 class="newsletter__title">Subscribe To Our Newsletter</h2>
-            <p class="newsletter__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
-            </p>
-
-            <div class="newsletter__input-wrapper">
-              <input class="newsletter__input" type="text" id="email" placeholder="Enter your email">
-              <a class="button">Subscribe</a>
-            </div>
-
+          <div class="newsletter__input-wrapper">
+            <input class="newsletter__input" type="text" id="email" placeholder="Enter your email">
+            <a class="button">Subscribe</a>
           </div>
 
         </div>

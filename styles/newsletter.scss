@@ -11,33 +11,10 @@
 .newsletter {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 1rem;
 
-    border: $border-cyan;
-    padding: 2rem;
-
-    backdrop-filter: blur(5px) saturate(180%);
-    -webkit-backdrop-filter: blur(5px) saturate(180%);
-    background-color: rgba(24, 119, 133, 0.75);
-
-    @media (width >= 1200px) {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    &__text-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    &__title {
-        color: $yellow-dark;
-    }
-
-    &__description {
-    }
+    border-radius: $border-radius;
+    padding: $padding;
 
     &__input-wrapper {
         display: flex;
@@ -46,13 +23,13 @@
     }
 
     &__input {
-        border: $border-cyan;
+        border-radius: $border-radius;
         padding: 0.75rem 1.25rem;
 
-        backdrop-filter: blur(5px) saturate(180%);
-        -webkit-backdrop-filter: blur(5px) saturate(180%);
-        background-color: rgba(24, 119, 133, 0.75);
-        color: $cyan;
+        -webkit-backdrop-filter: $background-blur;
+        backdrop-filter: $background-blur;
+        background: $white;
+        color: $black;
     }
 
     &__image-wrapper {

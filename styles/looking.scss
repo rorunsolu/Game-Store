@@ -7,46 +7,10 @@
     text-align: center;
     gap: 3rem;
 
-        padding: 5rem 0;
+    padding: 5rem 0;
 
     @media (width >= 700px) {
         padding: 10rem 0;
-    }
-
-    &__text-wrapper {
-        text-align: center;
-    }
-
-    &__question-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    &__question {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        border: $border-cyan;
-        padding: 1.25rem;
-
-        font-size: 1.5rem;
-        font-weight: 500;
-
-        backdrop-filter: blur(5px) saturate(180%);
-        -webkit-backdrop-filter: blur(5px) saturate(180%);
-        background-color: rgba(24, 119, 133, 0.36);
-        color: $cyan;
-
-        i {
-            margin-right: 1rem;
-
-            font-size: 1.75rem;
-            font-weight: 800;
-
-            color: $white;
-        }
     }
 
     &__card-wrapper {
@@ -67,22 +31,32 @@
     &__card {
         display: flex;
         flex-direction: column;
+
+        border-radius: $border-radius;
     }
 
     &__card-image {
-        border: $border-cyan;
+        border: $border-glass;
+        border-radius: $border-radius;
 
-        max-width: 15rem;
+        box-shadow: $shadow;
 
         aspect-ratio: 2 / 3;
 
-        @media (width >= 600px) {
-            max-width: none;
+        &:hover {
+            cursor: pointer;
+            transition: $transition;
+
+            filter: blur(1px) brightness(0.5);
         }
     }
 
     &__card-rating {
-        color: $yellow-dark;
+        margin-top: 1rem;
+
+        font-size: 1.5rem;
+
+        color: $yellow;
     }
 
     &__card-title {
@@ -91,12 +65,8 @@
 
     &__card-description {
         font-size: 0.8rem;
-        color: $orange-dark;
-    }
+        color: $orange;
 
-    img {
-    }
-
-    button {
+        padding-bottom: $padding;
     }
 }

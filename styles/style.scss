@@ -7,27 +7,11 @@ $yellow: hsl(45, 100%, 50%);
 $cyan: hsl(178, 100%, 50%);
 
 /*Background & Shadows*/
-$background-color: rgba(17, 25, 40, 0.75);
-$background-gradient: linear-gradient(
-    35deg,
-    hsl(276deg 87% 26%) 0%,
-    hsl(270deg 71% 29%) 15%,
-    hsl(263deg 63% 32%) 28%,
-    hsl(257deg 57% 34%) 39%,
-    hsl(251deg 53% 36%) 48%,
-    hsl(244deg 49% 37%) 55%,
-    hsl(238deg 48% 38%) 62%,
-    hsl(232deg 53% 37%) 67%,
-    hsl(227deg 58% 37%) 71%,
-    hsl(223deg 63% 36%) 75%,
-    hsl(219deg 68% 35%) 79%,
-    hsl(216deg 72% 34%) 82%,
-    hsl(213deg 77% 33%) 84%,
-    hsl(211deg 80% 33%) 87%,
-    hsl(209deg 82% 33%) 91%,
-    hsl(208deg 81% 33%) 95%,
-    hsl(207deg 79% 33%) 100%
-);
+//$background-color: rgba(17, 25, 40, 0.71);
+//$background-color: rgba(17, 39, 40, 0.71);
+$background-color: rgba(193, 194, 194, 0.11);
+
+
 $background-blur: blur(16px) saturate(180%);
 $background-blur-webkit: -webkit-blur(16px) saturate(180%);
 $shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
@@ -68,23 +52,36 @@ body {
     background-color: hsla(0, 0%, 4%);
     color: hsl(0, 0%, 100%);
 
-    background-image: url("/images/background-city.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-
     display: grid;
     grid-template-areas:
-        "nav nav nav"
-        "header header header"
-        "main main main"
-        "footer footer footer";
-    grid-template-rows: auto auto auto auto;
+        "nav"
+        "header"
+        "main"
+        "footer";
 
     min-height: 100vh;
-}
 
-article {
-    //background-color: $background-color;
+    position: relative;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        background-image: url("/images/gradient-bg.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        filter: brightness(0.15);
+        //filter: blur(20px);
+    }
 }
 
 nav {
@@ -128,22 +125,20 @@ header {
 
 footer {
     grid-area: footer;
-
-    background-color: $background-color;
 }
 
 main {
     display: grid;
     grid-area: main;
     grid-template-areas:
-        "platform platform platform"
-        "featured featured featured"
-        "browse browse browse"
-        "opinions opinions opinions"
-        "reason reason reason"
-        "looking looking looking"
-        "updates updates updates"
-        "newsletter newsletter newsletter";
+        "platform"
+        "featured"
+        "browse"
+        "opinions"
+        "reason"
+        "looking"
+        "updates"
+        "newsletter";
     grid-template-rows: auto;
 
     -webkit-backdrop-filter: $background-blur;
@@ -164,34 +159,19 @@ section {
         width: 100%;
         height: 100%;
 
-        background-size: cover;
-        background-position: center;
+        //background-size: cover;
+        //background-position: center;
 
-        filter: brightness(0.5);
+        //filter: brightness(0.15);
+        //filter: blur(20px);
     }
 }
 
 #platform {
     grid-area: platform;
 
-    position: relative;
-
     &::before {
-        content: "";
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-
-        width: 100%;
-        height: 100%;
-
         //background-image: url("/images/black-bg-2.jpg");
-        background-size: cover;
-        background-position: center;
-
-        filter: brightness(0.5);
     }
 }
 
@@ -201,21 +181,8 @@ section {
     position: relative;
 
     &::before {
-        content: "";
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-
-        width: 100%;
-        height: 100%;
-
         //background-image: url("/images/geralt.jpg");
-        background-size: cover;
-        background-position: center;
-
-        filter: brightness(0.5);
+        //background-image: url("/images/black-bg-2.jpg");
     }
 }
 
@@ -246,8 +213,6 @@ section {
 #opinions {
     grid-area: opinions;
 
-    position: relative;
-
     &::before {
         //background-image: url("/images/black-bg-2.jpg");
     }
@@ -257,7 +222,8 @@ section {
     grid-area: updates;
 
     &::before {
-        background-image: url("/images/lies-of-p-bg.jpeg");
+        //background-image: url("/images/lies-of-p-bg.jpeg");
+        //background-image: url("/images/black-bg-2.jpg");
     }
 }
 
@@ -310,12 +276,14 @@ h2 {
 h3 {
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
 
     text-transform: capitalize;
 
     font-size: 1.25rem;
+
+    color: $white;
 
     @media (width >= 500px) {
         font-size: 1.5rem;
@@ -383,7 +351,7 @@ img {
     }
 
     &:active {
-        box-shadow: $shadow;
+        border: 1px solid $white;
     }
 }
 

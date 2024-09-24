@@ -1,5 +1,3 @@
-@import "styles/style.scss";
-
 nav {
     display: grid;
     place-items: center;
@@ -12,6 +10,10 @@ nav {
 
     height: 5rem;
     width: 100vw;
+
+    border-bottom: var(--border-glass);
+
+    background-color: var(--bg-frosted-white);
 
     @media (width < 600px) {
         height: 3.5rem;
@@ -31,7 +33,7 @@ nav {
         font-size: 2rem;
         font-weight: 600;
 
-        color: $white;
+        color: var(--color-white);
 
         @media (width < 600px) {
             font-size: 1.5rem;
@@ -54,8 +56,8 @@ nav {
             top: 100%;
             right: 0;
 
-            backdrop-filter: $background-blur;
-            -webkit-backdrop-filter: $background-blur;
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
             background-color: rgba(32, 73, 68, 0.75);
         }
     }
@@ -73,7 +75,7 @@ nav {
         font-size: 1rem;
         font-weight: 500;
 
-        color: $white;
+        color: var(--color-white);
 
         @media (width < 1000px) {
             display: flex;
@@ -85,7 +87,7 @@ nav {
         }
 
         &:hover {
-            color: $cyan;
+            color: var(--color-yellow);
         }
     }
 
@@ -110,7 +112,7 @@ nav {
 .nav__toggle-button {
     display: none;
 
-    color: $white;
+    color: var(--color-white);
 
     @media (width < 1000px) {
         display: inline-block;
@@ -126,11 +128,11 @@ nav {
 }
 
 #nav__toggle-open {
-    color: $white;
+    color: var(--color-white);
 }
 
 #nav__toggle-close {
-    color: $white;
+    color: var(--color-white);
     @media (width < 1000px) {
         display: none;
     }

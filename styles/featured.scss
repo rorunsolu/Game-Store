@@ -5,14 +5,12 @@
     flex-direction: column;
     gap: 3rem;
 
-    padding: 5rem 0;
-
-    @media (width >= 700px) {
-        padding: 10rem 0;
-    }
-
     @media (width >= 1200px) {
         align-items: center;
+    }
+
+        @media (width < 400px) {
+        text-align: center;
     }
 
     &__text-wrapper {
@@ -23,8 +21,6 @@
         @media (min-width: 1000px) {
             flex-direction: row;
             justify-content: space-between;
-
-            max-width: 1400px;
         }
     }
 
@@ -39,21 +35,21 @@
     }
 
     &__tab {
-        color: $grey;
+        color: var(--color-grey);
 
         @media (width >= 800px) {
             font-size: 1rem;
         }
 
         &:hover {
-            color: $orange;
+            color: var(--color-yellow);
         }
     }
 
     &__card-wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: $gap-card-wrapper;
+        gap: var(--gap-card-wrapper);
 
         @media (width < 1575px) {
             grid-template-columns: repeat(3, 1fr);
@@ -73,33 +69,38 @@
         flex-direction: column;
         align-items: center;
 
-        border: $border-glass;
-        border-radius: $border-radius;
-        padding: $padding;
+        border: var(--border-glass);
+        border-radius: var(--border-radius);
 
-        -webkit-backdrop-filter: $background-blur;
-        backdrop-filter: $background-blur;
+        -webkit-backdrop-filter: var(--blur);
+        backdrop-filter: var(--blur);
 
-        background-color: $background-color;
+        background-color: var(--bg-frosted-white);
 
-        filter: $shadow-card;
+        box-shadow: var(--shadow);
     }
 
     &__card-image {
-        border: $border-glass;
-        border-radius: $border-radius;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
         margin-bottom: 0.5rem;
 
         aspect-ratio: 16 / 9;
     }
 
     &__card-rating {
+        padding: 0 var(--padding);
+
         font-size: 1.5rem;
 
-        color: $yellow;
+        color: var(--color-yellow);
     }
 
     &__card-description {
         margin-bottom: 1rem;
+        padding: 0 var(--padding);
+    }
+
+    .button {
+        margin-bottom: var(--padding);
     }
 }

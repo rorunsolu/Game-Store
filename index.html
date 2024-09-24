@@ -22,7 +22,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
           rel="stylesheet">
 
-    <title>Vite App</title>
+    <script type="module" src="/main.js"></script>
+
+    <title>Game Store</title>
   </head>
 
   <body>
@@ -34,9 +36,9 @@
 
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#meet">Shop</a></li>
-          <li class="nav__item"><a class="nav__link" href="#testimonials">Contact</a></li>
-          <li class="nav__item"><a class="nav__link" href="#schedule">About Us</a></li>
+          <li class="nav__item"><a class="nav__link" href="#browse">Games</a></li>
+          <li class="nav__item"><a class="nav__link" href="#updates">News</a></li>
+          <li class="nav__item"><a class="nav__link" href="#reason">About Us</a></li>
         </ul>
 
         <div class="nav__buttons-wrapper">
@@ -57,16 +59,15 @@
       <div class="container header">
 
         <p class="header__offer">Up to 50% off all games for this month only</p>
-        <h1 class="header__title">Discover The Best Gaming Platform</h1>
+        <h1 class="header__title">Buy here, Play Everywhere</h1>
         <p class="header__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.</p>
-          <ul class="header__list">
-            <li class="header__point">Rollback Game Updates</li>
-            <li class="header__point">Cross Platform</li>
-            <li class="header__point">Play Anywhere</li>
-          </ul>
-
+          Discover the latest and greatest games across all platforms, with exclusive deals you won't find anywhere
+          else.</p>
+        <ul class="header__list">
+          <li class="header__point">Rollback Updates</li>
+          <li class="header__point">Cross Platform</li>
+          <li class="header__point">Play Anywhere</li>
+        </ul>
         <a class="button" href="#" target="_blank">Shop Now</a>
 
       </div>
@@ -178,44 +179,18 @@
 
             <article class="browse__card">
               <h3 class="browse__card-title">Adventure</h3>
-              <div class="browse__card-list">
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/returnal-icon.png"
-                       alt="image of the game Returnal">Returnal</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/fo4-icon.png"
-                       alt="image of the game Returnal">Fallout 4</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/rdr2-icon.png"
-                       alt="image of the game Returnal">Red Dead Redemption 2</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/hzd-icon.png"
-                       alt="image of the game Returnal">Horizon Zero Dawn</div>
-              </div>
             </article>
 
             <article class="browse__card">
               <h3 class="browse__card-title">FPS</h3>
-              <div class="browse__card-list">
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/hzd-icon.png"
-                       alt="image of the game Returnal">Call of Duty: Modern Warfare</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/overwatch-icon.png"
-                       alt="image of the game Returnal">Overwatch</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/doom-icon.png"
-                       alt="image of the game Returnal">DOOM Eternal</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/bf5-icon.png"
-                       alt="image of the game Returnal">Battlefield V</div>
-              </div>
             </article>
 
             <article class="browse__card">
               <h3 class="browse__card-title">RPG</h3>
-              <div class="browse__card-list">
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/witcher-3-icon.png"
-                       alt="image of the game Returnal">The Witcher 3: Wild Hunt</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/ff-icon.png"
-                       alt="image of the game Returnal">Final Fantasy VII Remake</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/ds3-icon.jpg"
-                       alt="image of the game Returnal">Dark Souls III</div>
-                <div class="browse__card-item"><img class="browse__card-image" src="/images/persona-icon.png"
-                       alt="image of the game Returnal">Persona 5</div>
-              </div>
+            </article>
+
+            <article class="browse__card">
+              <h3 class="browse__card-title">Open World</h3>
             </article>
 
           </div>
@@ -348,7 +323,7 @@
 
       </section>
 
-      <!-- <section id="opinions">
+      <section id="opinions">
 
         <div class="container opinions">
 
@@ -394,7 +369,7 @@
               </div>
 
               <p class="opinions__card-statement">I've tried other game stores before, but none of them compare to this
-                one. The community is so friendly and helpful. Thanks!</p>
+                one. The community is so friendly and helpful.</p>
 
             </article>
 
@@ -419,7 +394,7 @@
 
           </div>
 
-      </section> -->
+      </section>
 
       <section id="updates">
 
@@ -434,7 +409,7 @@
 
             <article class="updates__card">
               <img class="updates__card-image" src="./images/4090-gpu.jpg" alt="image">
-              <h3 class="updates__card-title">Path Tracing Enabled Games</h3>
+              <h3 class="updates__card-title">Path Tracing Enabled Games - The Future?</h3>
               <p class="updates__card-text">Experience the cutting-edge visuals in games with path tracing, offering
                 unprecedented
                 lighting realism and enhanced reflections.</p>
@@ -449,7 +424,7 @@
 
             <article class="updates__card">
               <img class="updates__card-image" src="./images/unreal-engine.jpg" alt="image">
-              <h3 class="updates__card-title">The Future of Graphical Fidelity</h3>
+              <h3 class="updates__card-title">The Future of Graphical Fidelity is Here</h3>
               <p class="updates__card-text">Discover how advancements in rendering technologies, such as Unreal Engine
                 5, are
                 pushing the boundaries of realism in gaming and beyond.</p>
@@ -467,7 +442,7 @@
               <h3 class="updates__card-title">Lies of P - The Greatest Game ever?</h3>
               <p class="updates__card-text">Explore the hype around Lies of P, a thrilling and challenging game that has
                 captivated
-                players with its unique storytelling and intense gameplay.</p>
+                players around the world.</p>
               <div class="updates__card-bottom">
                 <a class="button" href="#" target="_blank">Read More</a>
                 <div class="updates__card-stats">
@@ -528,7 +503,69 @@
 
     </footer>
 
-    <script type="module" src="/main.js"></script>
+    <script>
+
+      window.addEventListener('scroll',
+        function () {
+          document.querySelector('nav').classList.toggle('window-scrolled', window.scrollY > 0);
+        });
+
+      const nav = document.querySelector('.nav__list');
+      const openNavButton = document.querySelector('#nav__toggle-open');
+      const closeNavButton = document.querySelector('#nav__toggle-close');
+
+      const openNav = function () {
+        if (nav.style.display === 'none') {
+          nav.style.display = 'flex';
+          openNavButton.style.display = 'none';
+          closeNavButton.style.display = 'inline-block';
+        }
+
+        else {
+          nav.style.display = 'none';
+          openNavButton.style.display = 'inline-block';
+          closeNavButton.style.display = 'none';
+        }
+      };
+
+      openNavButton.addEventListener('click', openNav);
+
+      const closeNav = function () {
+
+        nav.style.display = 'none';
+
+        openNavButton.style.display = 'inline-block';
+
+        closeNavButton.style.display = 'none';
+      };
+
+      closeNavButton.addEventListener('click', closeNav);
+
+      if (document.body.clientWidth < 1000) {
+        nav.querySelectorAll('li a').forEach(navLink => {
+          navLink.addEventListener('click', closeNav);
+        });
+      }
+
+      const accordionHeader = document.querySelectorAll(".accordion__header");
+
+      accordionHeader.forEach(accordionHeader => {
+        accordionHeader.addEventListener("click", event => {
+          accordionHeader.classList.toggle("active");
+          const accordionBody = accordionHeader.nextElementSibling;
+
+          if (accordionHeader.classList.contains("active")) {
+            accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+          }
+
+          else {
+            accordionBody.style.maxHeight = 0;
+          }
+
+        });
+      });
+
+    </script>
 
   </body>
 

@@ -1,27 +1,38 @@
-@import "styles/style.scss";
-
 .header {
     display: flex;
     flex-direction: column;
-
-    padding-top: 15rem;
-    padding-bottom: 10rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     height: 100vh;
 
-    @media (width >= 1000px) {
-        padding-top: 22.5rem;
-        padding-bottom: 22.5rem;
+    &__offer {
+        border: var(--border-glass);
+        border-radius: var(--border-radius);
+        padding: 0.5rem 1rem;
+
+        width: fit-content;
+
+        font-weight: 500;
+
+        color: var(--color-white);
+        background-color: var(--bg-frosted-white);
+
+        backdrop-filter: var(--bg-blur);
+        background-color: var(--bg-frosted-white);
     }
 
     &__title {
-        width: 70%;
+        color: var(--color-white);
     }
 
     &__description {
-        width: 70%;
+        font-size: 1.35rem;
 
-        font-size: 1.5rem;
+        @media (width < 703px) {
+            font-size: 1.1rem;
+        }
     }
 
     &__list {
@@ -29,26 +40,13 @@
     }
 
     &__point {
-        color: $grey;
+        color: var(--color-grey);
 
-        font-size: 1.5rem;
+        font-size: 1.35rem;
 
-        list-style: disc;
-    }
-
-    &__offer {
-        border: $border-glass;
-        border-radius: $border-radius;
-        padding: 0.5rem 1rem;
-
-        width: fit-content;
-
-        font-weight: 500;
-
-        color: $white;
-        background-color: $background-color;
-        -webkit-backdrop-filter: $background-blur;
-        backdrop-filter: $background-blur;
+                @media (width < 703px) {
+            font-size: 1.1rem;
+        }
     }
 
     &__description {

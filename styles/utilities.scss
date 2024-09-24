@@ -1,0 +1,60 @@
+.container {
+    width: 90%;
+
+    margin: 0 auto;
+    max-width: 1800px;
+
+    position: relative;
+
+    @media (width <= 400px) {
+        width: 95%;
+    }
+}
+
+.nav-container {
+    width: 95%;
+
+    margin: 0 auto;
+    max-width: 1800px;
+
+    position: relative;
+
+    @media (width <= 1000px) {
+        width: 100%;
+    }
+}
+
+.window-scrolled {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+
+    -webkit-backdrop-filter: var(--bg-blur);
+    backdrop-filter: var(--bg-blur);
+
+    background-color: var(--bg-frosted-white-secondary);
+}
+
+.button {
+    border: var(--border-glass);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1.25rem;
+
+    width: fit-content;
+
+    font-weight: 500;
+
+    color: var(--color-white);
+    background-color: var(--bg-frosted-white);
+
+    backdrop-filter: var(--bg-blur);
+    background-color: var(--bg-frosted-white);
+
+    &:hover {
+        transition: var(--transition);
+
+        background-color: var(--bg-frosted-white-secondary);
+    }
+
+    &:active {
+        border: 1px solid var(--color-white);
+    }
+}

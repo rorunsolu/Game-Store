@@ -1,23 +1,9 @@
 @import "styles/style.scss";
 
-#browse {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    color: hsl(0, 0%, 100%);
-}
-
 .browse {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-
-    padding: 5rem 0;
-
-    @media (width >= 700px) {
-        padding: 10rem 0;
-    }
 
     &__text-wrapper {
         display: flex;
@@ -48,15 +34,17 @@
 
     &__card-wrapper {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: $gap-card-wrapper;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--gap-card-wrapper);
 
         @media (width < 1300px) {
             grid-template-columns: repeat(2, 1fr);
+            gap: var(--gap-card-wrapper-medium);
         }
 
         @media (width < 750px) {
             grid-template-columns: repeat(1, 1fr);
+            gap: var(--gap-card-wrapper-large);
         }
     }
 
@@ -69,16 +57,16 @@
 
         position: relative;
 
-        border: $border-glass;
-        border-radius: $border-radius;
-        padding: $padding;
+        border: var(--border-glass);
+        border-radius: var(--border-radius);
 
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 1 / 1;
 
-        color: $cyan;
-        background-color: $background-color;
+        //background-color: var(--bg-frosted-white);
 
-        &::before {
+        box-shadow: var(--shadow);
+
+        &:before {
             content: "";
 
             position: absolute;
@@ -89,84 +77,35 @@
             width: 100%;
             height: 100%;
 
-            border-radius: $border-radius;
+            border-radius: var(--border-radius);
 
             background-size: cover;
-            background-position: center;
+            background-position: 55% 50%;
 
-            filter: blur(5px);
-            filter: brightness(0.3);
+            filter: blur(2px) brightness(0.8);
+        }
+
+        &:nth-child(1)::before {
+            background-image: url("../images/rdr2-bg.jpg");
+            background-position: 80% 50%;
+        }
+
+        &:nth-child(2)::before {
+            background-image: url("../images/bf5-bg.jpg");
+        }
+
+        &:nth-child(3)::before {
+            background-image: url("../images/witcher-3-bg.jpg");
+        }
+
+        &:nth-child(4)::before {
+            background-image: url("../images/gos-bg.jpg");
         }
 
         &:hover::before {
-            filter: brightness(0.8);
+            filter: blur(1px) brightness(0.5);
 
-            transition: $transition;
+            transition: var(--transition);
         }
-    }
-
-    &__card:nth-child(1) {
-        &::before {
-            //background-image: url("/images/landscape (2).jpg");
-        }
-    }
-
-    &__card:nth-child(2) {
-        &::before {
-            //background-image: url("/images/landscape (3).jpg");
-        }
-    }
-
-    &__card:nth-child(3) {
-        &::before {
-            //background-image: url("/images/landscape.jpg");
-        }
-    }
-
-    &__card-title {
-
-        font-size: 1.75rem;
-
-        @media (width >= 600px) {
-            font-size: 1.25rem;
-        }
-    }
-
-    &__card-list {
-        display: grid;
-        grid-template-rows: repeat(4, 1fr);
-        gap: 0.5rem;
-    }
-
-    &__card-item {
-        display: flex;
-        align-items: center;
-
-        height: 3.5rem;
-
-        border: $border-glass;
-        border-radius: $border-radius;
-        padding-right: $padding;
-
-        box-sizing: content-box;
-
-        color: $white;
-        background-color: $background-color;
-        -webkit-backdrop-filter: $background-blur;
-        backdrop-filter: $background-blur;
-
-        &:hover {
-            cursor: pointer;
-
-            color: $yellow;
-        }
-    }
-
-    &__card-image {
-        border-radius: $border-radius 0 0 $border-radius;
-        margin-right: 1rem;
-
-        width: 3.5rem;
-        height: 3.5rem;
     }
 }

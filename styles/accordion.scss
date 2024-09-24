@@ -1,17 +1,13 @@
-@import "styles/style.scss";
-
 .accordion {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
     &__item {
-        border: $border-glass;
-        border-radius: $border-radius;
+        border: var(--border-glass);
+        border-radius: var(--border-radius);
 
-        -webkit-backdrop-filter: $background-blur;
-        backdrop-filter: $background-blur;
-        //background-color: $background-color;
+        background-color: var(--bg-frosted-white);
     }
 
     &__header {
@@ -37,7 +33,7 @@
 
             font-size: 2rem;
 
-            color: $white;
+            color: var(--color-white);
         }
     }
 
@@ -61,6 +57,6 @@
         font-weight: 300;
         line-height: 1.5rem;
 
-        color: $white;
+        color: var(--color-white);
     }
 }

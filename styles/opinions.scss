@@ -6,10 +6,8 @@
     align-items: center;
     gap: 3rem;
 
-    padding: 5rem 0;
-
-    @media (width >= 700px) {
-        padding: 10rem 0;
+    @media (width < 850px) {
+        text-align: center;
     }
 
     &__image-wrapper {
@@ -20,17 +18,15 @@
 
     &__card-wrapper {
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        gap: $gap-card-wrapper;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap-card-wrapper);
 
-        @media (width >= 1000px) {
+        @media (width < 1300px) {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
         }
 
-        @media (width >= 2000px) {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
+        @media (width < 850px) {
+            grid-template-columns: 1fr;
         }
     }
     &__card-wrapper-2 {
@@ -56,35 +52,33 @@
         min-height: 15rem;
         max-width: 600px;
 
-        border: $border-glass;
-        border-radius: $border-radius;
-        padding: $padding;
+        border: var(--border-glass);
+        border-radius: var(--border-radius);
+        padding: var(--padding);
 
-        -webkit-backdrop-filter: $background-blur-webkit;
-        backdrop-filter: $background-blur;
+        -webkit-backdrop-filter: var(--blur);
+        backdrop-filter: var(--blur);
 
-        filter: $shadow-card;
+        box-shadow: var(--shadow);
     }
     &__card-image {
         border-radius: 100%;
 
-        width: 6rem;
-        height: 6rem;
+        width: 5.5rem;
+        height: 5.5rem;
     }
     &__card-name {
         font-size: 1.5rem;
 
-        @media (width <= 500px) {
+        @media (width < 500px) {
             font-size: 1.25rem;
         }
     }
     &__card-location {
-        //color: $grey;
-
         font-size: 1rem;
     }
     &__card-rating {
-        color: $yellow;
+        color: var(--color-yellow);
 
         font-size: 1rem;
         font-size: 1rem;

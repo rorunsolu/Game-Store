@@ -58,7 +58,8 @@ nav {
 
             backdrop-filter: var(--blur);
             -webkit-backdrop-filter: var(--blur);
-            background-color: rgba(32, 73, 68, 0.75);
+
+            background-color: var(--bg-frosted-white-secondary);
         }
     }
 
@@ -120,8 +121,6 @@ nav {
         background: transparent;
 
         font-size: 2rem;
-
-        color: hsl(0, 0%, 0%);
 
         cursor: pointer;
     }

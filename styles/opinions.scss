@@ -56,8 +56,7 @@
         border-radius: var(--border-radius);
         padding: var(--padding);
 
-        -webkit-backdrop-filter: var(--blur);
-        backdrop-filter: var(--blur);
+        background-color: var(--bg-frosted-white);
 
         box-shadow: var(--shadow);
     }

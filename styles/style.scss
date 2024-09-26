@@ -118,7 +118,7 @@ header {
         background-repeat: no-repeat;
         background-position: 90% 0%;
 
-        filter: brightness(0.7) blur(2px);
+        filter: brightness(0.7);
 
         @media (width <= 1000px) {
             background-position: 55% 0%;

@@ -58,3 +58,15 @@
         border: 1px solid var(--color-white);
     }
 }
+
+.button-direct {
+    color: var(--color-orange);
+
+    transition: var(--transition);
+
+    &:hover {
+        text-decoration: underline;
+
+        color: var(--color-orange);
+    }
+}

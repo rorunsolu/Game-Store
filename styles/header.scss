@@ -13,6 +13,16 @@
         @media (width < 1200px) {
             font-size: 1.25rem;
         }
+
+        @media (width < 750px) {
+            font-size: 1rem;
+        }
+
+        @media (width < 600px) {
+            flex-direction: column;
+
+            margin-bottom: 2rem;
+        }
     }
 
     &__stat-platforms {
@@ -33,6 +43,11 @@
             height: 2.25rem;
         }
 
+        @media (width < 600px) {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+
         &:not(:first-child) {
             margin-left: -1rem;
         }
@@ -45,7 +60,7 @@
     &__description {
         font-size: 1.35rem;
 
-        @media (width < 703px) {
+        @media (width < 750px) {
             font-size: 1.1rem;
         }
     }

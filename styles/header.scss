@@ -1,12 +1,10 @@
 .header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
 
     &__stat-wrapper {
         display: flex;
-        align-items: center;
+
 
         font-size: 1.5rem;
 
@@ -19,9 +17,11 @@
         }
 
         @media (width < 600px) {
+            display: none;
+
             flex-direction: column;
 
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
     }
 

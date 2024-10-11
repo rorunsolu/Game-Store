@@ -1,3 +1,7 @@
+#opinions {
+    background-color: var(--bg-frosted-black);
+}
+
 .opinions {
     display: flex;
     flex-direction: column;
@@ -16,7 +20,7 @@
 
     &__card-wrapper-2 {
         display: flex;
-        
+
         align-items: center;
 
         margin-bottom: 1rem;
@@ -35,14 +39,12 @@
         border: var(--border-glass);
         border-radius: var(--border-radius);
         padding: var(--padding);
-        //padding: 3rem;
+        padding: 3rem;
 
-        //min-height: 15rem;
-
-        background-color: var(--bg-frosted-black);
+        background-color: var(--bg-frosted-white);
         box-shadow: var(--shadow);
 
-                @media (width < 450px) {
+        @media (width < 450px) {
             padding: var(--padding);
         }
     }
@@ -57,6 +59,8 @@
     }
 
     &__card-statement {
+        font-style: italic;
+
         color: var(--color-white);
     }
 }

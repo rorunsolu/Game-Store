@@ -8,7 +8,6 @@ import '/styles/slider-logo.scss';
 import '/styles/platform.scss';
 import '/styles/featured.scss';
 import '/styles/reason.scss';
-import '/styles/description.scss';
 import '/styles/looking.scss';
 import '/styles/accordion.scss';
 import '/styles/opinions.scss';

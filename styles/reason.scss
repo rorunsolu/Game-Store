@@ -7,9 +7,6 @@
         margin-bottom: 4rem;
     }
 
-    &__title {
-    }
-
     &__description {
         width: 65%;
 
@@ -22,6 +19,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
         gap: var(--gap-card-wrapper);
+
+                @media (width < 700px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__card {
@@ -37,18 +38,12 @@
 
             padding: 2rem;
         }
-    }
 
-    &__card-icon-wrapper {
-    }
+        @media (width < 400px) {
+            
 
-    &__card-text-wrapper {
-    }
-
-    &__card-title {
-    }
-
-    &__card-body {
+            padding: var(--padding);
+        }
     }
 
     svg {

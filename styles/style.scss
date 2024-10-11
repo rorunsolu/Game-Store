@@ -92,9 +92,9 @@ body {
             rgba(2, 37, 78, 1) 100.2%
         );
 
-        -webkit-backdrop-filter: var(--bg-blur);
-        backdrop-filter: var(--bg-blur);
-        filter: brightness(0.4);
+        //-webkit-backdrop-filter: var(--bg-blur);
+        //backdrop-filter: var(--bg-blur);
+        filter: brightness(0.8);
     }
 }
 
@@ -137,7 +137,7 @@ section {
 
 h1 {
     font-size: 7rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.35;
 
     @media (width < 1675px) {

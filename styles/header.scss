@@ -1,11 +1,11 @@
 .header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    //justify-content: center;
     align-items: center;
     text-align: center;
 
-    height: 100vh;
+    //height: 100vh;
 
     &__stat-wrapper {
         display: flex;
@@ -24,10 +24,14 @@
         }
     }
 
-    &__image {
-        aspect-ratio: 16 / 9;
+    img {
+                //aspect-ratio: 16 / 9;
 
         border-radius: var(--border-radius-inner);
+    }
+
+    &__image {
+
     }
 
     &__stat-platforms {
@@ -90,6 +94,10 @@
 
     .image-wrapper {
         padding: var(--padding-image-wrapper);
+        padding: 0;
+        border: 0;
+
+        box-shadow: var(--shadow);
 
         @media (width <= 600px) {
             padding: var(--padding-image-wrapper-sm);

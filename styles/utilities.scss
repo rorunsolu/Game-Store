@@ -48,13 +48,11 @@
     font-weight: var(--font-weight-button);
 
     color: var(--color-white);
-    background-color: var(--bg-frosted-white);
-
-    backdrop-filter: var(--bg-blur);
-    background-color: var(--bg-frosted-white);
+    background-color: var(--color-black);
 
     &:hover {
-        background-color: var(--bg-frosted-white-secondary);
+        color: var(--color-black);
+        background-color: var(--color-white);
     }
 
     &:active {
@@ -79,4 +77,8 @@
     font-weight: 600;
 
     color: var(--color-white);
+
+    &:hover {
+        color: var(--color-orange);
+    }
 }

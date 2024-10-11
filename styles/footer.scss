@@ -21,14 +21,14 @@
 
         padding: 1rem 0;
 
-        background-color: var(--color-white);
+        background-color: var(--color-black);
 
         @media (width <= 350px) {
             display: none;
         }
 
         p {
-            color: var(--color-black);
+            color: var(--color-white);
         }
     }
 
@@ -55,11 +55,17 @@
 
         a {
             color: var(--color-grey);
+
+            &:hover {
+                color: var(--color-orange);
+            }
         }
     }
 
     span {
         transition: var(--transition);
+
+        cursor: pointer;
 
         &:hover {
             color: var(--color-white);

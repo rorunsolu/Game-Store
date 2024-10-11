@@ -16,7 +16,6 @@
     max-width: 800px;
 
     margin: 0 auto;
-    //max-width: 1800px;
 
     top: 1rem;
 
@@ -27,31 +26,15 @@
 
     background-color: var(--bg-frosted-white);
     backdrop-filter: var(--bg-blur);
-    background-color: var(--bg-frosted-white);
-
-    @media (width <= 1000px) {
-        //width: 100%;
-    }
-}
-
-.image-wrapper {
-    border: var(--border-glass);
-    border-radius: var(--border-radius);
-    padding: 0 var(--padding-image-wrapper) var(--padding-image-wrapper) 0;
-
-    background-color: var(--bg-frosted-white);
-    box-shadow: var(--shadow);
-
-    @media (width <= 600px) {
-        padding: 0 var(--padding-image-wrapper-sm) var(--padding-image-wrapper-sm) 0;
-    }
 }
 
 .image-solo {
-    border-radius: var(--border-radius-inner) 0 var(--border-radius-inner) 0;
+    border-radius: var(--border-radius);
+
+    box-shadow: var(--shadow);
 
     @media (width <= 600px) {
-        aspect-ratio: 1 / 1;
+        //aspect-ratio: 1 / 1;
     }
 }
 

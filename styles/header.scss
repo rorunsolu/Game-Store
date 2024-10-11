@@ -1,37 +1,19 @@
 .header {
     display: flex;
     flex-direction: column;
-    //justify-content: center;
     align-items: center;
     text-align: center;
 
-    //height: 100vh;
 
     &__stat-wrapper {
         display: flex;
         align-items: center;
-
-        //border: var(--border-glass);
-        //border-radius: var(--border-radius);
-        //padding: 0.5rem 1rem;
-
-        //background-color: var(--bg-frosted-white);
 
         font-size: 1.5rem;
 
         @media (width < 1200px) {
             font-size: 1.25rem;
         }
-    }
-
-    img {
-                //aspect-ratio: 16 / 9;
-
-        border-radius: var(--border-radius-inner);
-    }
-
-    &__image {
-
     }
 
     &__stat-platforms {

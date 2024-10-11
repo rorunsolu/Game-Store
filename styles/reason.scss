@@ -52,16 +52,4 @@
             color: var(--color-grey);
         }
     }
-
-    .image-wrapper {
-        padding:  0 0 var(--padding-image-wrapper) var(--padding-image-wrapper);
-
-                @media (width < 1000px) {
-            order: 2;
-        }
-    }
-
-    .image-solo {
-        border-radius: 0 var(--border-radius-inner) 0 var(--border-radius-inner) ;
-    }
 }

@@ -84,7 +84,7 @@ body {
         height: 100%;
 
         background-image: radial-gradient(
-            circle farthest-corner at 10% 20%,
+            circle farthest-corner at 10% 46%,
             rgba(85, 245, 221, 1) 0%,
             rgba(4, 56, 126, 1) 19.7%,
             rgba(2, 37, 78, 1) 100.2%
@@ -154,20 +154,12 @@ h2 {
 
     text-transform: capitalize;
 
-    font-size: 1.75rem;
+    font-size: 3rem;
 
     color: var(--color-white);
 
-    @media (width >= 600px) {
-        font-size: 2rem;
-    }
-
-    @media (width >= 1000px) {
+    @media (width < 400px) {
         font-size: 2.5rem;
-    }
-
-    @media (width >= 1200px) {
-        font-size: 2.75rem;
     }
 }
 

@@ -17,7 +17,6 @@
     &__card {
         display: flex;
         flex-direction: column;
-        //align-items: center;
 
         border: var(--border-glass);
         border-radius: var(--border-radius);
@@ -39,11 +38,11 @@
     }
 
     &__card-title {
-        padding: 0 var(--padding);
+        padding-left: var(--padding);
     }
 
     &__card-rating {
-        padding: 0 var(--padding);
+        padding-left: var(--padding);
 
         font-size: 1.5rem;
 
@@ -51,8 +50,7 @@
     }
 
     &__card-description {
-        margin-bottom: 1rem;
-        padding: 0 var(--padding);
+        padding-left: var(--padding);
 
         font-size: 0.8rem;
 

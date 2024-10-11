@@ -92,8 +92,6 @@ body {
             rgba(2, 37, 78, 1) 100.2%
         );
 
-        //-webkit-backdrop-filter: var(--bg-blur);
-        //backdrop-filter: var(--bg-blur);
         filter: brightness(0.8);
     }
 }
@@ -101,10 +99,6 @@ body {
 nav {
     height: 5rem;
     width: 100vw;
-
-    //border-bottom: var(--border-glass);
-
-    //background-color: var(--bg-frosted-black);
 
     @media (width < 600px) {
         height: 3.5rem;
@@ -201,10 +195,6 @@ p {
     font-size: 1rem;
 
     color: var(--color-grey);
-
-    @media (width <= 500px) {
-        //font-size: 0.85rem;
-    }
 }
 
 img {

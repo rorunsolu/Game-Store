@@ -1,5 +1,3 @@
-@import "styles/style.scss";
-
 .browse {
     display: flex;
     flex-direction: column;
@@ -18,34 +16,22 @@
         }
     }
 
-    &__title {
-        @media (width >= 600px) {
-            font-size: 1.5rem;
-        }
-
-        @media (width >= 750px) {
-            font-size: 2rem;
-        }
-
-        @media (width >= 1000px) {
-            font-size: 2.5rem;
-        }
-    }
-
     &__card-wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: var(--gap-card-wrapper);
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // gap: var(--gap-card-wrapper);
 
-        @media (width < 1300px) {
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--gap-card-wrapper-medium);
-        }
+        // @media (width < 1300px) {
+        //     grid-template-columns: repeat(2, 1fr);
+        //     gap: var(--gap-card-wrapper-medium);
+        // }
 
-        @media (width < 750px) {
-            grid-template-columns: repeat(1, 1fr);
-            gap: var(--gap-card-wrapper-large);
-        }
+        // @media (width < 750px) {
+        //     grid-template-columns: repeat(1, 1fr);
+        //     gap: var(--gap-card-wrapper-large);
+        // }
+
+        position: relative;
     }
 
     &__card {
@@ -55,14 +41,14 @@
         align-items: center;
         gap: 1rem;
 
-        position: relative;
+        //position: relative;
 
         border: var(--border-glass);
         border-radius: var(--border-radius);
 
         aspect-ratio: 1 / 1;
-
-        //background-color: var(--bg-frosted-white);
+        //aspect-ratio: 16 / 9;
+        max-width: 400px;
 
         box-shadow: var(--shadow);
 
@@ -83,6 +69,30 @@
             background-position: 55% 50%;
 
             filter: blur(2px) brightness(0.8);
+
+            transition: var(--transition);
+        }
+
+        &:nth-child(1) {
+            z-index: 4;
+        }
+
+        &:nth-child(2) {
+            z-index: 3;
+            top: 25%; // Adjust this value to control how much the card overlaps
+            left: 25%; // Adjust this value to control how much the card overlaps
+        }
+
+        &:nth-child(3) {
+            z-index: 2;
+            top: 50%; // Adjust this value to control how much the card overlaps
+            left: 50%; // Adjust this value to control how much the card overlaps
+        }
+
+        &:nth-child(4) {
+            z-index: 1;
+            top: 75%; // Adjust this value to control how much the card overlaps
+            left: 75%; // Adjust this value to control how much the card overlaps
         }
 
         &:nth-child(1)::before {
@@ -104,8 +114,10 @@
 
         &:hover::before {
             filter: blur(1px) brightness(0.5);
-
-            transition: var(--transition);
         }
+    }
+
+    &__card-title {
+        display: none;
     }
 }

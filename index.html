@@ -7,21 +7,16 @@
     <meta name="description"
           content="Explore a diverse collection of video games across different genres in our game store. Find the latest releases, top-rated games, and all-time favorites, with detailed information and easy navigation." />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-    <!-- Modern Normalize -->
     <link href="https://cdn.jsdelivr.net/npm/modern-normalize@v2.0.0
       /modern-normalize.min.css" rel="stylesheet">
 
-    <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <!-- Box Icons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
@@ -37,11 +32,13 @@
     <nav>
       <div class="nav-container nav">
 
-        <a class="nav__logo" href="#">Logo</a>
+        <a href="#">
+          <img class="nav__logo" src="images/logo.png" alt="Game Store Logo">
+        </a>
 
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#browse">Games</a></li>
+          <li class="nav__item"><a class="nav__link" href="#featured">Games</a></li>
           <li class="nav__item"><a class="nav__link" href="#updates">News</a></li>
           <li class="nav__item"><a class="nav__link" href="#reason">About Us</a></li>
         </ul>
@@ -49,7 +46,6 @@
         <div class="nav__buttons-wrapper">
           <a class="button" href="#" target="_blank">Sign Up</a>
         </div>
-
 
         <button class="nav__toggle-button" id="nav__toggle-open" type="button"><i class="ri-menu-line"></i>
         </button>
@@ -59,27 +55,144 @@
       </div>
     </nav>
 
-    <header id="header">
+    <header>
 
       <div class="container header">
 
-        <p class="header__offer">Up to 50% off all games for this month only</p>
-        <h1 class="header__title">Buy here, Play Everywhere</h1>
+        <div class="header__stat-wrapper">40,000 games playable
+          <div class="header__stat-platforms">
+            <img class="header__stat-icon" src="images/steam-icon.png" alt="Steam Icon">
+            <img class="header__stat-icon" src="images/xbox-icon.png" alt="Xbox Icon">
+            <img class="header__stat-icon" src="images/playstation-icon.png" alt="PlayStation Icon">
+            <img class="header__stat-icon" src="images/gog-icon.png" alt="GOG Icon">
+          </div>on all major platforms
+        </div>
+
+        <h1 class="header__title">Buy Here, Play Anywhere</h1>
+
         <p class="header__description">
           Discover the latest and greatest games across all platforms, with exclusive deals you won't find anywhere
           else.</p>
+
         <ul class="header__list">
           <li class="header__point">Rollback Updates</li>
           <li class="header__point">Cross Platform</li>
           <li class="header__point">Play Anywhere</li>
         </ul>
+
         <a class="button" href="#" target="_blank">Shop Now</a>
+
+        <div class="image-wrapper">
+          <img class="header__image" src="images/header-gog.jpg" alt="Header Image">
+        </div>
 
       </div>
 
     </header>
 
     <main>
+
+      <section id="slider-logo">
+
+        <div class="container slider-logo">
+
+          <div class="slider">
+            <div class="slider-track">
+
+              <div class="slide">
+                <img src="/images/steam-icon.png" alt="Steam Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/xbox-icon.png" alt="Xbox Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/gog-icon.png" alt="GOG Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/apple-icon.png" alt="Apple Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/epic-icon.png" alt="Epic Games Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/microsoft-icon.png" alt="Microsoft Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/google-icon.png" alt="Google Logo">
+              </div>
+
+              <div class="slide">
+                <img src="/images/steam-icon.png" alt="Steam Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/xbox-icon.png" alt="Xbox Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/gog-icon.png" alt="GOG Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/apple-icon.png" alt="Apple Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/epic-icon.png" alt="Epic Games Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/microsoft-icon.png" alt="Microsoft Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/google-icon.png" alt="Google Logo">
+              </div>
+
+              <div class="slide">
+                <img src="/images/steam-icon.png" alt="Steam Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/xbox-icon.png" alt="Xbox Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/gog-icon.png" alt="GOG Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/apple-icon.png" alt="Apple Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/epic-icon.png" alt="Epic Games Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/microsoft-icon.png" alt="Microsoft Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/google-icon.png" alt="Google Logo">
+              </div>
+
+              <div class="slide">
+                <img src="/images/steam-icon.png" alt="Steam Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/xbox-icon.png" alt="Xbox Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/gog-icon.png" alt="GOG Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/apple-icon.png" alt="Apple Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/epic-icon.png" alt="Epic Games Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/microsoft-icon.png" alt="Microsoft Logo">
+              </div>
+              <div class="slide">
+                <img src="/images/google-icon.png" alt="Google Logo">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
 
       <section id="platform">
 
@@ -120,16 +233,29 @@
 
               </div>
 
+              <div class="platform__benefit">
+                <div class="platform__icon-wrapper">
+                  <i class="ri-trophy-line"></i>
+                </div>
+
+                <p class="platform__benefit-text"><span class="platform__benefit-name">Achievement Tracking</span> Keep
+                  track
+                  of your game achievements across different platforms, and celebrate your milestones and completed
+                  challenges.<br><a
+                     class="button-direct" href="#">Learn More</a></p>
+              </div>
+
             </div>
 
           </div>
 
-          <img class="platform__image" src="./images/platform-img.jpg" alt="Gamers enjoying video games">
+          <div class="image-wrapper">
+            <img class="image-solo" src="./images/platform-img.jpg" alt="Gamers enjoying video games">
+          </div>
 
         </div>
 
       </section>
-
 
       <section id="featured">
 
@@ -141,8 +267,8 @@
 
             <article class="featured__card">
               <img class="featured__card-image" src="./images/elden-ring.jpg" alt="image" loading="lazy">
-              <h3 class="featured__card-title">Elden Ring</h3>
               <p class="featured__card-rating">★★★★★</p>
+              <h3 class="featured__card-title">Elden Ring</h3>
               <p class="featured__card-description">RPG, Soulsborne, Open World</p>
               <a class="button" href="#" target="_blank">Play Now</a>
             </article>
@@ -150,8 +276,8 @@
             <article class="featured__card">
 
               <img class="featured__card-image" src="./images/sekiro.jpg" alt="image" loading="lazy">
-              <h3 class="featured__card-title">Sekiro</h3>
               <p class="featured__card-rating">★★★★★</p>
+              <h3 class="featured__card-title">Sekiro</h3>
               <p class="featured__card-description">Soulsborne, Single Player, Action</p>
 
               <a class="button" href="#" target="_blank">Play Now</a>
@@ -186,52 +312,21 @@
 
       </section>
 
-      <section id="browse">
-
-        <div class="container browse">
-
-          <div class="browse__text-wrapper">
-            <h2 class="browse__title">Browse By Catagory</h2>
-
-            <div class="button-wrapper">
-              <a class="button" href="#" target="_blank">View All</a>
-            </div>
-
-          </div>
-
-          <div class="browse__card-wrapper">
-
-            <article class="browse__card">
-              <h3 class="browse__card-title">Adventure</h3>
-            </article>
-
-            <article class="browse__card">
-              <h3 class="browse__card-title">FPS</h3>
-            </article>
-
-            <article class="browse__card">
-              <h3 class="browse__card-title">RPG</h3>
-            </article>
-
-            <article class="browse__card">
-              <h3 class="browse__card-title">Open World</h3>
-            </article>
-
-          </div>
-
-        </div>
-
-      </section>
-
       <section id="reason">
 
         <div class="container reason">
 
+          <div class="image-wrapper">
+            <img class="image-solo" src="./images/xbox-img.jpg" alt="A steam library for of games">
+          </div>
+
           <div class="reason__text-wrapper">
+
             <h2 class="reason__title">Great Reasons To Play</h2>
             <p class="reason__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor
               incididunt ut labore et dolore magna aliqua.</p>
+
             <div class="reason__feature-wrapper">
 
               <article class="reason__feature">
@@ -279,17 +374,70 @@
                 </div>
               </article>
 
-
             </div>
           </div>
-
-
-
-          <img class="reason__image" src="./images/platform-img.jpg" alt="Gamers enjoying video games">
 
         </div>
 
       </section>
+
+      <!-- <section id="description">
+
+        <div class="container description">
+
+
+          <div class="description__row-text">
+            <span class="description__row-subtitle">Subtitle</span>
+            <h2 class="description__row-title">Customize Game Pages</h2>
+            <p class="description__row-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <picture>
+
+            <source media="(min-width: 1500px)" srcset="/images/custom-page-img-lg.png">
+
+            <source media="(min-width: 1110px)" srcset="/images/custom-page-img-md.png">
+
+            <source media="(max-width: 1109px)" srcset="/images/custom-page-img-sm.png">
+
+            <img class="image-solo" src="/images/achievement-img-lg.png" alt="" loading="lazy">
+
+          </picture>
+
+          <img class="image-solo" src="/images/game-sales-img.jpg" alt="" loading="lazy">
+
+          <div class="description__row-text">
+            <span class="description__row-subtitle">Subtitle</span>
+            <h2 class="description__row-title">Sales</h2>
+            <p class="description__row-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <div class="description__row-text">
+            <span class="description__row-subtitle">Subtitle</span>
+            <h2 class="description__row-title">Universal Achievements</h2>
+            <p class="description__row-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <picture>
+
+            <source media="(min-width: 1500px)" srcset="/images/achievement-img-lg.png">
+
+            <source media="(min-width: 1110px)" srcset="/images/achievement-img-md.png">
+
+            <source media="(max-width: 1109px)" srcset="/images/achievement-img-sm.png">
+
+            <img class="image-solo" src="/images/achievement-img-lg.png" alt="" loading="lazy">
+
+          </picture>
+
+
+
+        </div>
+
+      </section> -->
 
       <section id="looking">
 
@@ -302,21 +450,24 @@
           <div class="looking__card-wrapper">
 
             <article class="looking__card">
-              <img class="looking__card-image" src="./images/cyberpunk-2077.jpg" alt="image" loading="lazy">
+              <a href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/" target="_blank">
+                <img class="looking__card-image" src="./images/cyberpunk-2077.jpg" alt="image" loading="lazy"></a>
               <p class="looking__card-rating">★★★★★</p>
               <h3 class="looking__card-title">Cyberpunk 2077</h3>
               <p class="looking__card-description">Open World, Cyberpunk, RPG</p>
             </article>
 
             <article class="looking__card">
-              <img class="looking__card-image" src="./images/death-stranding.jpg" alt="image" loading="lazy">
+              <a href="https://store.steampowered.com/app/1850570/DEATH_STRANDING_DIRECTORS_CUT/" target="_blank"><img
+                     class="looking__card-image" src="./images/death-stranding.jpg" alt="image" loading="lazy"></a>
               <p class="looking__card-rating">★★★★★</p>
               <h3 class="looking__card-title">Death Stranding</h3>
               <p class="looking__card-description">Open World, Action, Walking Sim</p>
             </article>
 
             <article class="looking__card">
-              <img class="looking__card-image" src="./images/doom-eternal.jpg" alt="image" loading="lazy">
+              <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/" target="_blank"><img
+                     class="looking__card-image" src="./images/doom-eternal.jpg" alt="image" loading="lazy"></a>
               <p class="looking__card-rating">★★★★★</p>
               <h3 class="looking__card-title">Doom Eternal</h3>
               <p class="looking__card-description">Singleplayer, Action, Gore</p>
@@ -379,8 +530,6 @@
 
           <h2 class="opinions__title">What our users say</h2>
 
-          <a class="button" href="#" target="_blank">View All</a>
-
           <div class="opinions__card-wrapper">
 
             <article class="opinions__card">
@@ -390,17 +539,14 @@
                 <img class="opinions__card-image" src="./images/person-3.jpg" alt="image" loading="lazy">
 
                 <div class="opinions__card-wrapper-3">
-                  <h3 class="opinions__card-name">Amine</h3>
+                  <p class="opinions__card-name">Amine</p>
                   <p class="opinions__card-location">Paris, France</p>
                 </div>
-
-                <p class="opinions__card-rating">★★★★★</p>
 
               </div>
 
               <p class="opinions__card-statement">I've been playing games for years, but this is the first time I've
-                ever
-                felt like I'm part of a community. Thanks for everything!</p>
+                ever felt like I'm part of a group. I’ve recommended this store to all my friends.</p>
 
             </article>
 
@@ -411,38 +557,42 @@
                 <img class="opinions__card-image" src="./images/person-2.jpg" alt="image" loading="lazy">
 
                 <div class="opinions__card-wrapper-3">
-                  <h3 class="opinions__card-name">Joshua</h3>
+                  <p class="opinions__card-name">Joshua</p>
                   <p class="opinions__card-location">New York, USA</p>
                 </div>
 
-                <p class="opinions__card-rating">★★★★★</p>
               </div>
 
-              <p class="opinions__card-statement">I've tried other game stores before, but none of them compare to this
-                one. The community is so friendly and helpful.</p>
+              <p class="opinions__card-statement">I've tried other game stores before, but none of them compare to
+                this
+                one.
+                The community is so friendly and helpful!
+              </p>
 
             </article>
 
-            <article class="opinions__card opinions__card--different">
+            <article class="opinions__card">
 
               <div class="opinions__card-wrapper-2">
 
                 <img class="opinions__card-image" src="./images/person-5.jpg" alt="image" loading="lazy">
 
                 <div class="opinions__card-wrapper-3">
-                  <h3 class="opinions__card-name">Alicia</h3>
+                  <p class="opinions__card-name">Alicia</p>
                   <p class="opinions__card-location">London, England</p>
                 </div>
 
-                <p class="opinions__card-rating">★★★★</p>
               </div>
 
               <p class="opinions__card-statement">The support is top-notch and the staff is always helpful. Thanks for
-                everything!</p>
+                everything!
+                Whenever I have an issue, it's resolved quickly.</p>
 
             </article>
 
           </div>
+
+        </div>
 
       </section>
 
@@ -508,57 +658,61 @@
 
       </section>
 
-      <section id="newsletter">
+    </main>
 
-        <div class="container newsletter">
+    <footer>
 
-          <h2 class="newsletter__title">Subscribe To Our Newsletter</h2>
-          <p class="newsletter__description">
-            Stay up to date with the latest news, promotions and discounts from our store. Don't miss out on
-            the best deals and newest games. Subscribe now and get 10% off on your first purchase.
-          </p>
+      <div class="container footer">
 
-          <div class="newsletter__input-wrapper">
-            <input class="newsletter__input" type="text" id="email" placeholder="Enter your email">
-            <a class="button">Subscribe</a>
+        <div class="footer__wrapper">
+
+          <div class="footer__company">
+            <a class="logo" href="#">Game Store</a>
+            <p>Your ultimate destination for the latest and greatest video games. Explore a vast collection of games
+              across
+              all genres and platforms.</p>
+            <p>Call us at <span>123-456-7890</span></p>
+          </div>
+
+          <div class="footer__contact">
+            <h3 class="footer__subheader">Contact Us</h3>
+            <ul>
+              <li><a href="mailto:support@gamestore.com">support@gamestore.com</a></li>
+              <li><a href="tel:1234567890">123-456-7890</a></li>
+              <li><a href="https://www.google.com/maps/search/123+Game+Street,+City,+State+12345">123 Game Street, City,
+                  State 12345</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__about">
+            <h3 class="footer__subheader">About Us</h3>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__services">
+            <h3 class="footer__subheader">Categories</h3>
+            <ul>
+              <li><a href="#">Action & Adventure</a></li>
+              <li><a href="#">Role-Playing Games</a></li>
+              <li><a href="#">Sports Games</a></li>
+            </ul>
           </div>
 
         </div>
 
-      </section>
+      </div>
 
-    </main>
-
-    <footer id="footer">
-
-      <div class="container footer">
-
-        <a class="footer__logo" href="#">Logo</a>
-
-        <ul class="footer__list-ql">
-          <li class="footer__item"><a class="footer__link" href="#">Home</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Shop</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Contact</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">About Us</a></li>
-        </ul>
-
-        <ul class="footer__list-l">
-          <li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Terms & Conditions</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Cookie Policy</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">FAQ's</a></li>
-        </ul>
-
+      <div class="footer__wrapper-2">
+        <p>© 2024 Game Store. All rights reserved.</p>
       </div>
 
     </footer>
 
     <script>
-
-      window.addEventListener('scroll',
-        function () {
-          document.querySelector('nav').classList.toggle('window-scrolled', window.scrollY > 0);
-        });
 
       const nav = document.querySelector('.nav__list');
       const openNavButton = document.querySelector('#nav__toggle-open');

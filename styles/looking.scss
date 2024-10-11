@@ -1,23 +1,16 @@
 .looking {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
+    gap: 4rem;
 
     &__card-wrapper {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        justify-content: center;
         gap: var(--gap-card-wrapper);
 
-        @media (width < 1200px) {
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--gap-card-wrapper-medium);
-        }
-
-        @media (width < 600px) {
-            grid-template-columns: repeat(1, 1fr);
-            gap: var(--gap-card-wrapper-large);
+        @media (width < 400px) {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
     }
 
@@ -58,8 +51,7 @@
 
     &__card-description {
         font-size: 0.8rem;
-        color: var(--color-grey);
 
-        padding-bottom: var(--padding);
+        color: var(--color-grey);
     }
 }

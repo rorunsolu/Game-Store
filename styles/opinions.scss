@@ -1,39 +1,25 @@
-@import "styles/style.scss";
-
 .opinions {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-
-    @media (width < 850px) {
-        text-align: center;
-    }
-
-    &__image-wrapper {
-        img {
-            aspect-ratio: 1 / 1;
-        }
-    }
+    gap: 4rem;
 
     &__card-wrapper {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        justify-content: center;
         gap: var(--gap-card-wrapper);
 
-        @media (width < 1300px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (width < 850px) {
-            grid-template-columns: 1fr;
+        @media (width < 400px) {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
     }
+
     &__card-wrapper-2 {
         display: flex;
-        justify-content: center;
+        
         align-items: center;
-        gap: 2rem;
+
+        margin-bottom: 1rem;
     }
 
     &__card-wrapper-3 {
@@ -44,42 +30,33 @@
     &__card {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        text-align: center;
-        gap: 1rem;
-
-        min-height: 15rem;
-        max-width: 600px;
 
         border: var(--border-glass);
         border-radius: var(--border-radius);
         padding: var(--padding);
+        //padding: 3rem;
 
-        background-color: var(--bg-frosted-white);
+        //min-height: 15rem;
 
+        background-color: var(--bg-frosted-black);
         box-shadow: var(--shadow);
+
+                @media (width < 450px) {
+            padding: var(--padding);
+        }
     }
     &__card-image {
         border-radius: 100%;
-
-        width: 5.5rem;
-        height: 5.5rem;
+        margin-right: 1rem;
+        width: 3rem;
+        height: 3rem;
     }
     &__card-name {
-        font-size: 1.5rem;
-
-        @media (width < 500px) {
-            font-size: 1.25rem;
-        }
+        color: var(--color-white);
     }
-    &__card-location {
-        font-size: 1rem;
-    }
-    &__card-rating {
-        color: var(--color-yellow);
 
-        font-size: 1rem;
-        font-size: 1rem;
+    &__card-statement {
+        color: var(--color-white);
     }
 }

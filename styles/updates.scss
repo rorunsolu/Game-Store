@@ -1,33 +1,16 @@
-@import "styles/style.scss";
-
 .updates {
     display: flex;
     flex-direction: column;
     gap: 4rem;
 
-    &__text-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2rem;
-    }
-
     &__card-wrapper {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        justify-content: center;
+        gap: var(--gap-card-wrapper);
 
-        @media (width <= 1610px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (width < 1300px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (width < 800px) {
-            grid-template-columns: repeat(1, 1fr);
+        @media (width < 400px) {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
     }
 
@@ -50,6 +33,7 @@
 
     &__card-image {
         aspect-ratio: 16 / 9;
+        height: auto;
     }
 
     &__card-title {
@@ -61,12 +45,16 @@
 
         min-height: 4.5rem;
 
+        color: var(--color-grey);
+
+        overflow-y: hidden;
+
         @media (width < 960px) {
             min-height: 6rem;
         }
 
         @media (width < 800px) {
-            min-height: 0;
+            //min-height: 0;
         }
     }
 

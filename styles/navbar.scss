@@ -1,19 +1,13 @@
 nav {
-    display: grid;
-    place-items: center;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-
     height: 5rem;
     width: 100vw;
 
-    border-bottom: var(--border-glass);
+    position: fixed;
+    z-index: 60;
 
-    background-color: var(--bg-frosted-white);
+    //margin-top: 5rem;
+
+    //border-bottom: var(--border-glass);
 
     @media (width < 600px) {
         height: 3.5rem;
@@ -30,8 +24,8 @@ nav {
     height: 100%;
 
     &__logo {
-        font-size: 2rem;
-        font-weight: 600;
+        width: 4.5rem;
+        height: 4.5rem;
 
         color: var(--color-white);
 
@@ -56,10 +50,10 @@ nav {
             top: 100%;
             right: 0;
 
-            backdrop-filter: var(--blur);
-            -webkit-backdrop-filter: var(--blur);
+            //backdrop-filter: var(--blur);
+            //-webkit-backdrop-filter: var(--blur);
 
-            background-color: var(--bg-frosted-white-secondary);
+            background-color: var(--color-white);
         }
     }
 

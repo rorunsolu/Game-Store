@@ -1,0 +1,45 @@
+.description {
+    border: var(--border-glass);
+    border-radius: var(--border-radius);
+
+    display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+
+    background-color: var(--bg-frosted-white);
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+        grid-template-rows: 1fr;
+        place-items: center;
+
+        //aspect-ratio: 3 / 1;
+    }
+
+    &__row-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 5rem;
+
+        //aspect-ratio: 16 / 9;
+    }
+
+    &__row-subtitle {
+        text-transform: uppercase;
+    }
+
+    &__row-title {
+    }
+
+    &__row-body {
+    }
+
+    .image-solo {
+        border: var(--border-glass);
+        border-radius: var(--border-radius);
+
+        box-shadow: var(--shadow);
+    }
+}

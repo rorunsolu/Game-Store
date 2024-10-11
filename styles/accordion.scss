@@ -7,7 +7,7 @@
         border: var(--border-glass);
         border-radius: var(--border-radius);
 
-        background-color: var(--bg-frosted-black);
+        background-color: var(--bg-frosted-white);
     }
 
     &__header {
@@ -56,7 +56,5 @@
 
         font-weight: 300;
         line-height: 1.5rem;
-
-        color: var(--color-white);
     }
 }

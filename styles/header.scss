@@ -4,7 +4,6 @@
     align-items: center;
     text-align: center;
 
-
     &__stat-wrapper {
         display: flex;
         align-items: center;
@@ -72,17 +71,5 @@
 
     .button {
         margin-bottom: 3rem;
-    }
-
-    .image-wrapper {
-        padding: var(--padding-image-wrapper);
-        padding: 0;
-        border: 0;
-
-        box-shadow: var(--shadow);
-
-        @media (width <= 600px) {
-            padding: var(--padding-image-wrapper-sm);
-        }
     }
 }

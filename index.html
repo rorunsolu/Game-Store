@@ -59,10 +59,14 @@
 
         </div>
 
-        <button class="nav__toggle-button" id="nav__toggle-open" type="button"><i class="ri-menu-line"></i>
+        <button class="open-menu" id="js-open-menu" aria-label="open menu" type="button">
+          <i class="ri-menu-line"></i>
+        </button>
+
+        <!-- <button class="nav__toggle-button" id="nav__toggle-open" type="button"><i class="ri-menu-line"></i>
         </button>
         <button class="nav__toggle-button" id="nav__toggle-close" type="button"><i class="ri-close-line"></i>
-        </button>
+        </button> -->
 
       </div>
     </nav>
@@ -290,7 +294,7 @@
 
             <article class="featured__card">
               <img class="featured__card-image" src="./images/elden-ring.jpg" alt="image" loading="lazy">
-                            <h3 class="featured__card-title">Elden Ring</h3>
+              <h3 class="featured__card-title">Elden Ring</h3>
               <p class="featured__card-description">RPG, Soulsborne, Open World</p>
               <p class="featured__card-rating">★★★★★</p>
               <a class="button" href="#" target="_blank">
@@ -306,7 +310,7 @@
             <article class="featured__card">
 
               <img class="featured__card-image" src="./images/sekiro.jpg" alt="image" loading="lazy">
-                            <h3 class="featured__card-title">Sekiro</h3>
+              <h3 class="featured__card-title">Sekiro</h3>
               <p class="featured__card-description">Soulsborne, Single Player, Action</p>
               <p class="featured__card-rating">★★★★★</p>
               <a class="button" href="#" target="_blank">
@@ -341,7 +345,7 @@
 
               <img class="featured__card-image" src="./images/horizon.jpeg" alt="image" loading="lazy">
               <h3 class="featured__card-title">Horizon Zero dawn</h3>
-                         <p class="featured__card-description">Open World, Female Protagonist</p>   
+              <p class="featured__card-description">Open World, Female Protagonist</p>
               <p class="featured__card-rating">★★★★★</p>
               <a class="button" href="#" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -729,42 +733,103 @@
 
     <script>
 
-      const nav = document.querySelector('.nav__list');
-      const openNavButton = document.querySelector('#nav__toggle-open');
-      const closeNavButton = document.querySelector('#nav__toggle-close');
+      const openNavbarBtn = document.getElementById('js-open-menu');
+      openNavbarBtn.addEventListener('click', openNavbar);
 
-      const openNav = function () {
-        if (nav.style.display === 'none') {
-          nav.style.display = 'flex';
-          openNavButton.style.display = 'none';
-          closeNavButton.style.display = 'inline-block';
+      function openNavbar() {
+        if (document.getElementById('js-menu')) return;
+
+        const navbar = document.createElement('div');
+
+        let overlay = document.getElementById('menu-overlay');
+        if (!overlay) {
+          overlay = document.createElement('div');
+          overlay.className = 'menu-overlay';
+
+          overlay.style.display = 'block';
         }
 
-        else {
-          nav.style.display = 'none';
-          openNavButton.style.display = 'inline-block';
-          closeNavButton.style.display = 'none';
-        }
-      };
+        navbar.className = 'menu';
+        navbar.id = 'js-menu';
 
-      openNavButton.addEventListener('click', openNav);
+        navbar.innerHTML = `
+        
+          <div class="menu-top" id="js-menu-top">
 
-      const closeNav = function () {
+            <a class="logo" href="#">
+              <img class="logo-image" src="logo.png" alt="Game Store Logo">
+            </a>
 
-        nav.style.display = 'none';
+            <button class="close-menu" id="js-close-menu" aria-label="close menu" type="button">
+              <i class="ri-close-line"></i>
+            </button>
 
-        openNavButton.style.display = 'inline-block';
+          </div>
 
-        closeNavButton.style.display = 'none';
-      };
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#featured">Games</a></li>
+            <li><a href="#updates">News</a></li>
+            <li><a href="#reason">About Us</a></li>
+          </ul>
 
-      closeNavButton.addEventListener('click', closeNav);
+        `;
 
-      if (document.body.clientWidth < 1000) {
-        nav.querySelectorAll('li a').forEach(navLink => {
-          navLink.addEventListener('click', closeNav);
-        });
+        navbar.setAttribute('aria-hidden', 'false');
+        document.body.setAttribute('aria-hidden', 'true');
+
+        document.getElementById('js-open-menu').addEventListener('click', closeNavbar);
+
+        document.body.style.overflow = 'hidden';
+        document.body.appendChild(navbar);
       }
+
+      function closeNavbar() {
+        const navbar = document.getElementById('js-menu');
+
+        if (navbar) {
+          document.body.removeChild(navbar);
+          document.body.style.overflow = 'auto';
+          document.body.removeAttribute('aria-hidden');
+        }
+      }
+
+      // const nav = document.querySelector('.nav__list');
+      // const openNavButton = document.querySelector('#nav__toggle-open');
+      // const closeNavButton = document.querySelector('#nav__toggle-close');
+
+      // const openNav = function () {
+      //   if (nav.style.display === 'none') {
+      //     nav.style.display = 'flex';
+      //     openNavButton.style.display = 'none';
+      //     closeNavButton.style.display = 'inline-block';
+      //   }
+
+      //   else {
+      //     nav.style.display = 'none';
+      //     openNavButton.style.display = 'inline-block';
+      //     closeNavButton.style.display = 'none';
+      //   }
+      // };
+
+      // openNavButton.addEventListener('click', openNav);
+
+      // const closeNav = function () {
+
+      //   nav.style.display = 'none';
+
+      //   openNavButton.style.display = 'inline-block';
+
+      //   closeNavButton.style.display = 'none';
+      // };
+
+      // closeNavButton.addEventListener('click', closeNav);
+
+      // if (document.body.clientWidth < 1000) {
+      //   nav.querySelectorAll('li a').forEach(navLink => {
+      //     navLink.addEventListener('click', closeNav);
+      //   });
+      // }
 
       const accordionHeader = document.querySelectorAll(".accordion__header");
 

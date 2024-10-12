@@ -686,7 +686,9 @@
         <div class="footer__wrapper">
 
           <div class="footer__company">
-            <a class="logo" href="#">Game Store</a>
+            <a class="logo" href="#">
+              <img class="logo-image" src="/images/logo.png" alt="Game Store Logo">
+            </a>
             <p>Your ultimate destination for the latest and greatest video games. Explore a vast collection of games
               across
               all genres and platforms.</p>
@@ -735,6 +737,7 @@
 
       const openNavbarBtn = document.getElementById('js-open-menu');
       openNavbarBtn.addEventListener('click', openNavbar);
+      document.getElementById('js-close-menu').addEventListener('click', closeNavbar);
 
       function openNavbar() {
         if (document.getElementById('js-menu')) return;
@@ -745,7 +748,7 @@
         if (!overlay) {
           overlay = document.createElement('div');
           overlay.className = 'menu-overlay';
-
+          document.body.appendChild(overlay);
           overlay.style.display = 'block';
         }
 
@@ -757,7 +760,7 @@
           <div class="menu-top" id="js-menu-top">
 
             <a class="logo" href="#">
-              <img class="logo-image" src="logo.png" alt="Game Store Logo">
+              <img class="logo-image" src="/images/logo.png" alt="Game Store Logo">
             </a>
 
             <button class="close-menu" id="js-close-menu" aria-label="close menu" type="button">
@@ -766,31 +769,43 @@
 
           </div>
 
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#featured">Games</a></li>
-            <li><a href="#updates">News</a></li>
-            <li><a href="#reason">About Us</a></li>
-          </ul>
+          <div class="menu-bottom" id="js-menu-bottom">
+            
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#featured">Games</a></li>
+              <li><a href="#updates">News</a></li>
+              <li><a href="#reason">About Us</a></li>
+            </ul>
 
+          </div>
         `;
 
-        navbar.setAttribute('aria-hidden', 'false');
-        document.body.setAttribute('aria-hidden', 'true');
-
-        document.getElementById('js-open-menu').addEventListener('click', closeNavbar);
+        //navbar.setAttribute('aria-hidden', 'false');
+        //document.body.setAttribute('aria-hidden', 'true');
 
         document.body.style.overflow = 'hidden';
         document.body.appendChild(navbar);
+
+        const links = navbar.querySelectorAll('ul li a');
+        links.forEach(link => {
+          link.addEventListener('click', closeNavbar);
+        });
       }
 
       function closeNavbar() {
         const navbar = document.getElementById('js-menu');
+        let overlay = document.getElementById('menu-overlay');
 
         if (navbar) {
           document.body.removeChild(navbar);
           document.body.style.overflow = 'auto';
           document.body.removeAttribute('aria-hidden');
+        }
+
+        if (overlay) {
+          overlay.style.display = 'none';
+          overlay.remove();
         }
       }
 

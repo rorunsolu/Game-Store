@@ -3,6 +3,7 @@ import '/styles/utilities.scss';
 
 import '/styles/navbar.scss';
 import '/styles/header.scss';
+import '/styles/menu.scss';
 
 import '/styles/slider-logo.scss';
 import '/styles/platform.scss';

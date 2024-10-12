@@ -8,32 +8,16 @@
 
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
 
-    position: absolute;
-    z-index: 99;
+    position: fixed;
+    top: 0;
+    //right: 0;
+    z-index: 999;
 
     background-color: var(--bg-frosted-white-secondary);
     -webkit-backdrop-filter: var(--bg-blur);
     backdrop-filter: var(--bg-blur);
-}
 
-.menu-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 1rem;
-
-    .logo {
-        display: flex;
-
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
-
-        width: 5rem;
-        height: 5rem;
-    }
-
-    ul {
+     ul {
         /* I don't think it needs to be a flex container */
         display: flex;
         flex-direction: column;
@@ -63,21 +47,55 @@
     }
 }
 
+.menu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    //position: relative;
+
+    padding: 0 1rem;
+
+    .logo {
+        display: flex;
+
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.menu-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo-image {
     width: 100%;
 }
 
 .close-menu {
     margin-right: 1rem;
+
+    i {
+        background-color: var(--bg-frosted-white-secondary);
+
+        &:hover {
+            color: var(--color-white);
+        }
+    }
 }
 
 .menu-overlay {
-    display: none; /* Initially hidden */
+    //display: none;
 
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 90;
 
     width: 100vw;
     height: 100vh;

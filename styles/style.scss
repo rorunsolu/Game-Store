@@ -176,6 +176,10 @@ h3 {
 }
 
 button {
+    border-radius: 50%;
+
+    height: 3.5rem;
+
     cursor: pointer;
 
     font-size: 2rem;
@@ -184,16 +188,8 @@ button {
     background: transparent;
 
     i {
-        height: 100%;
-
         border-radius: 50%;
         padding: 0.5rem;
-
-        background-color: var(--bg-frosted-white-secondary);
-
-        &:hover {
-            color: var(--color-white);
-        }
     }
 }
 

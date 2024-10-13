@@ -13,7 +13,7 @@
 
 .nav-container {
     width: 95%;
-    max-width: 800px;
+    max-width: 1000px;
 
     margin: 0 auto;
 
@@ -48,12 +48,12 @@
 
     font-weight: var(--font-weight-button);
 
-    color: var(--color-white);
-    background-color: var(--color-black);
+    color: var(--color-black);
+    background-color: var(--color-white);
 
     &:hover {
-        color: var(--color-black);
-        background-color: var(--color-white);
+        color: var(--color-white);
+        background-color: var(--color-black);
     }
 
     &:active {

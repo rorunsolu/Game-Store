@@ -87,11 +87,11 @@ nav {
         @media (width < 1000px) {
             display: none;
         }
+    }
 
-        a {
-            @media (width < 1000px) {
-                display: none;
-            }
+    .button {
+        @media (width < 1000px) {
+            display: none;
         }
     }
 }

@@ -36,8 +36,9 @@
     <nav>
       <div class="nav-container nav">
 
-        <a href="#">
-          <img class="nav__logo" src="images/logo.png" alt="Game Store Logo">
+        <a class="logo" href="https://game-store-drab.vercel.app/">
+          
+          <img class="logo" src="images/logo.png" alt="Game Store Logo">
         </a>
 
         <ul class="nav__list">
@@ -62,11 +63,6 @@
         <button class="open-menu-btn" id="js-open-menu-btn" aria-label="open menu" type="button">
           <i class="ri-menu-line"></i>
         </button>
-
-        <!-- <button class="nav__toggle-button" id="nav__toggle-open" type="button"><i class="ri-menu-line"></i>
-        </button>
-        <button class="nav__toggle-button" id="nav__toggle-close" type="button"><i class="ri-close-line"></i>
-        </button> -->
 
       </div>
     </nav>
@@ -686,7 +682,7 @@
         <div class="footer__wrapper">
 
           <div class="footer__company">
-            <a class="logo" href="#">
+            <a class="logo" href="https://game-store-drab.vercel.app/">
               <img class="logo-image" src="/images/logo.png" alt="Game Store Logo">
             </a>
             <p>Your ultimate destination for the latest and greatest video games. Explore a vast collection of games
@@ -735,34 +731,16 @@
 
     <script>
 
-      const openMenuBarBtn = document.getElementById('js-open-menu-btn');
-      const closeMenuBarBtn = document.getElementById('js-close-menu-btn');
+      let openMenuBarBtn = document.getElementById('js-open-menu-btn');
+      let closeMenuBarBtn = document.getElementById('js-close-menu-btn');
 
       openMenuBarBtn.addEventListener('click', openMenuBar);
-      closeMenuBarBtn.addEventListener('click', closeMenuBar);
 
       function openMenuBar() {
-        //  checks if the menu already exists and if it doesn't exist, then the function continues
         if (document.getElementById('js-menu')) return;
 
-        const menuBar = document.createElement('div');
-        let overlay = document.getElementById('menu-overlay');
+        let menuBar = document.createElement('div');
 
-        // checks if overlay already exists
-        if (!overlay) {
-          // if it exists then it creates a new div
-          overlay = document.createElement('div');
-
-          // the new div is given the class name of "menu-overlay"
-          overlay.className = 'menu-overlay';
-
-          // the overlay is then added to the body
-          document.body.appendChild(overlay);
-
-          //overlay.style.display = 'block';
-        }
-
-        // the new div is given the class name of "menu" and the ID of "js-menu" (REFER TO -> const menuBar = document.createElement('div');)
         menuBar.className = 'menu';
         menuBar.id = 'js-menu';
 
@@ -770,7 +748,7 @@
         
           <div class="menu-top" id="js-menu-top">
 
-            <a class="logo" href="#">
+            <a class="logo" href="https://game-store-drab.vercel.app/">
               <img class="logo-image" src="/images/logo.png" alt="Game Store Logo">
             </a>
 
@@ -792,93 +770,70 @@
           </div>
         `;
 
-        //menuBar.setAttribute('aria-hidden', 'false');
-        //document.body.setAttribute('aria-hidden', 'true');
+        
 
-        // prevents the page from being scrolled when the menu is open
         document.body.style.overflow = 'hidden';
 
-        // the menu is then added to the body
         document.body.appendChild(menuBar);
 
-        const links = menuBar.querySelectorAll('ul li a');
-        // for each nav/menu link, when one of them is clicked the menu is closed (the function closeMenuBar() is called)
+        let links = menuBar.querySelectorAll('ul li a');
         links.forEach(link => {
           link.addEventListener('click', closeMenuBar);
         });
+
+        createOverlay();
       }
 
-      function closeMenuBar() {
+      function createOverlay() {
+        let overlay = document.createElement('div');
 
-        const menuBar = document.getElementById('js-menu');
-        let overlay = document.getElementById('menu-overlay');
+        overlay.className = 'menu-overlay';
 
-        if (menuBar) {
-          document.body.removeChild(menuBar);
-          document.body.style.overflow = 'auto';
-          //document.body.removeAttribute('aria-hidden');
-        }
+        overlay.addEventListener("click", removeOverlay);
+
+        document.body.appendChild(overlay);
+      }
+
+      function removeOverlay() {
+        let overlay = document.querySelector('.menu-overlay');
 
         if (overlay) {
-          //overlay.style.display = 'none';
           overlay.remove();
         }
       }
 
-      // const nav = document.querySelector('.nav__list');
-      // const openNavButton = document.querySelector('#nav__toggle-open');
-      // const closeNavButton = document.querySelector('#nav__toggle-close');
+      function closeMenuBar() {
+        let menuBar = document.getElementById('js-menu');
+        let closeMenuBarBtn = document.getElementById('js-close-menu-btn');
 
-      // const openNav = function () {
-      //   if (nav.style.display === 'none') {
-      //     nav.style.display = 'flex';
-      //     openNavButton.style.display = 'none';
-      //     closeNavButton.style.display = 'inline-block';
-      //   }
+        closeMenuBarBtn.addEventListener('click', closeMenuBar);
 
-      //   else {
-      //     nav.style.display = 'none';
-      //     openNavButton.style.display = 'inline-block';
-      //     closeNavButton.style.display = 'none';
-      //   }
-      // };
+        document.body.style.overflow = 'auto';
 
-      // openNavButton.addEventListener('click', openNav);
+        if (menuBar) {
+          menuBar.remove();
+        }
 
-      // const closeNav = function () {
+        removeOverlay();
+      }
 
-      //   nav.style.display = 'none';
+      // const accordionHeader = document.querySelectorAll(".accordion__header");
 
-      //   openNavButton.style.display = 'inline-block';
+      // accordionHeader.forEach(accordionHeader => {
+      //   accordionHeader.addEventListener("click", event => {
+      //     accordionHeader.classList.toggle("active");
+      //     const accordionBody = accordionHeader.nextElementSibling;
 
-      //   closeNavButton.style.display = 'none';
-      // };
+      //     if (accordionHeader.classList.contains("active")) {
+      //       accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+      //     }
 
-      // closeNavButton.addEventListener('click', closeNav);
+      //     else {
+      //       accordionBody.style.maxHeight = 0;
+      //     }
 
-      // if (document.body.clientWidth < 1000) {
-      //   nav.querySelectorAll('li a').forEach(navLink => {
-      //     navLink.addEventListener('click', closeNav);
       //   });
-      // }
-
-      const accordionHeader = document.querySelectorAll(".accordion__header");
-
-      accordionHeader.forEach(accordionHeader => {
-        accordionHeader.addEventListener("click", event => {
-          accordionHeader.classList.toggle("active");
-          const accordionBody = accordionHeader.nextElementSibling;
-
-          if (accordionHeader.classList.contains("active")) {
-            accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
-          }
-
-          else {
-            accordionBody.style.maxHeight = 0;
-          }
-
-        });
-      });
+      // });
 
     </script>
 

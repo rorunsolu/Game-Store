@@ -17,10 +17,6 @@
         background-color: var(--bg-frosted-white);
 
         @media (width < 600px) {
-            //display: none;
-
-            //flex-direction: column;
-
             margin-bottom: 1rem;
         }
     }
@@ -33,23 +29,10 @@
     }
 
     &__stat-icon {
-        width: 2.75rem;
-        height: 2.75rem;
-
         width: 1.75rem;
         height: 1.75rem;
 
         border-radius: 50%;
-
-        @media (width < 1200px) {
-            //width: 2.25rem;
-            //height: 2.25rem;
-        }
-
-        @media (width < 600px) {
-            //width: 1.75rem;
-            //height: 1.75rem;
-        }
 
         &:not(:first-child) {
             margin-left: -1rem;

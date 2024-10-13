@@ -37,7 +37,7 @@
       <div class="nav-container nav">
 
         <a class="logo" href="https://game-store-drab.vercel.app/">
-          
+
           <img class="logo" src="images/logo.png" alt="Game Store Logo">
         </a>
 
@@ -770,11 +770,13 @@
           </div>
         `;
 
-        
-
         document.body.style.overflow = 'hidden';
 
         document.body.appendChild(menuBar);
+
+        let closeMenuBarBtn = document.getElementById('js-close-menu-btn');
+
+        closeMenuBarBtn.addEventListener('click', closeMenuBar);
 
         let links = menuBar.querySelectorAll('ul li a');
         links.forEach(link => {
@@ -784,29 +786,9 @@
         createOverlay();
       }
 
-      function createOverlay() {
-        let overlay = document.createElement('div');
-
-        overlay.className = 'menu-overlay';
-
-        overlay.addEventListener("click", removeOverlay);
-
-        document.body.appendChild(overlay);
-      }
-
-      function removeOverlay() {
-        let overlay = document.querySelector('.menu-overlay');
-
-        if (overlay) {
-          overlay.remove();
-        }
-      }
-
       function closeMenuBar() {
         let menuBar = document.getElementById('js-menu');
-        let closeMenuBarBtn = document.getElementById('js-close-menu-btn');
-
-        closeMenuBarBtn.addEventListener('click', closeMenuBar);
+        let overlay = document.querySelector('.menu-overlay');
 
         document.body.style.overflow = 'auto';
 
@@ -816,6 +798,28 @@
 
         removeOverlay();
       }
+
+      function createOverlay() {
+        let overlay = document.createElement('div');
+
+        overlay.className = 'menu-overlay';
+
+        overlay.addEventListener("click", closeMenuBar);
+
+        document.body.appendChild(overlay);
+      }
+
+
+
+      function removeOverlay() {
+        let overlay = document.querySelector('.menu-overlay');
+
+        if (overlay) {
+          overlay.remove();
+        }
+      }
+
+
 
       // const accordionHeader = document.querySelectorAll(".accordion__header");
 

@@ -62,6 +62,14 @@
     }
 }
 
+.open-menu-btn {
+    display: none;
+
+    @media (width < 1000px) {
+        display: block;
+    }
+}
+
 .close-menu-btn {
     margin-right: 1rem;
 

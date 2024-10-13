@@ -33,14 +33,15 @@ nav {
 
     &__link {
         border-radius: var(--border-radius);
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1rem;
 
         font-weight: 500;
 
         color: var(--color-white);
 
         &:hover {
-            background-color: var(--bg-frosted-white-secondary);
+            color: var(--color-black);
+            background-color: var(--color-white);
         }
     }
 

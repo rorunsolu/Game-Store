@@ -1,5 +1,5 @@
 #opinions {
-    background-color: var(--bg-frosted-black);
+    //background-color: var(--bg-frosted-black);
 }
 
 .opinions {
@@ -41,19 +41,21 @@
         padding: var(--padding);
         padding: 3rem;
 
-        background-color: var(--color-white);
+        background-color: var(--bg-frosted-white);
         box-shadow: var(--shadow);
 
         @media (width < 450px) {
             padding: var(--padding);
         }
     }
+    
     &__card-image {
         border-radius: 100%;
         margin-right: 1rem;
         width: 3rem;
         height: 3rem;
     }
+
     &__card-name {
         color: var(--color-white);
     }

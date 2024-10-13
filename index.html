@@ -37,8 +37,7 @@
       <div class="nav-container nav">
 
         <a class="logo" href="https://game-store-drab.vercel.app/">
-
-          <img class="logo" src="images/logo.png" alt="Game Store Logo">
+          <img src="images/logo.png" alt="Game Store Logo">
         </a>
 
         <ul class="nav__list">
@@ -683,7 +682,7 @@
 
           <div class="footer__company">
             <a class="logo" href="https://game-store-drab.vercel.app/">
-              <img class="logo-image" src="/images/logo.png" alt="Game Store Logo">
+              <img src="/images/logo.png" alt="Game Store Logo">
             </a>
             <p>Your ultimate destination for the latest and greatest video games. Explore a vast collection of games
               across
@@ -749,7 +748,7 @@
           <div class="menu-top" id="js-menu-top">
 
             <a class="logo" href="https://game-store-drab.vercel.app/">
-              <img class="logo-image" src="/images/logo.png" alt="Game Store Logo">
+              <img src="/images/logo.png" alt="Game Store Logo">
             </a>
 
             <button class="close-menu-btn" id="js-close-menu-btn" aria-label="close menu" type="button">
@@ -809,8 +808,6 @@
         document.body.appendChild(overlay);
       }
 
-
-
       function removeOverlay() {
         let overlay = document.querySelector('.menu-overlay');
 
@@ -819,25 +816,23 @@
         }
       }
 
+      const accordionHeader = document.querySelectorAll(".accordion__header");
 
+      accordionHeader.forEach(accordionHeader => {
+        accordionHeader.addEventListener("click", event => {
+          accordionHeader.classList.toggle("active");
+          const accordionBody = accordionHeader.nextElementSibling;
 
-      // const accordionHeader = document.querySelectorAll(".accordion__header");
+          if (accordionHeader.classList.contains("active")) {
+            accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+          }
 
-      // accordionHeader.forEach(accordionHeader => {
-      //   accordionHeader.addEventListener("click", event => {
-      //     accordionHeader.classList.toggle("active");
-      //     const accordionBody = accordionHeader.nextElementSibling;
+          else {
+            accordionBody.style.maxHeight = 0;
+          }
 
-      //     if (accordionHeader.classList.contains("active")) {
-      //       accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
-      //     }
-
-      //     else {
-      //       accordionBody.style.maxHeight = 0;
-      //     }
-
-      //   });
-      // });
+        });
+      });
 
     </script>
 

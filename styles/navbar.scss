@@ -96,30 +96,3 @@ nav {
         }
     }
 }
-
-.nav__toggle-button {
-    display: none;
-
-    color: var(--color-white);
-
-    @media (width < 1000px) {
-        display: inline-block;
-
-        background: transparent;
-
-        font-size: 2rem;
-
-        cursor: pointer;
-    }
-}
-
-#nav__toggle-open {
-    color: var(--color-white);
-}
-
-#nav__toggle-close {
-    color: var(--color-white);
-    @media (width < 1000px) {
-        display: none;
-    }
-}

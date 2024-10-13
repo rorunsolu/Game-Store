@@ -59,7 +59,7 @@
 
         </div>
 
-        <button class="open-menu" id="js-open-menu" aria-label="open menu" type="button">
+        <button class="open-menu-btn" id="js-open-menu-btn" aria-label="open menu" type="button">
           <i class="ri-menu-line"></i>
         </button>
 
@@ -735,27 +735,38 @@
 
     <script>
 
-      const openNavbarBtn = document.getElementById('js-open-menu');
-      openNavbarBtn.addEventListener('click', openNavbar);
-      document.getElementById('js-close-menu').addEventListener('click', closeNavbar);
+      const openMenuBarBtn = document.getElementById('js-open-menu-btn');
+      const closeMenuBarBtn = document.getElementById('js-close-menu-btn');
 
-      function openNavbar() {
+      openMenuBarBtn.addEventListener('click', openMenuBar);
+      closeMenuBarBtn.addEventListener('click', closeMenuBar);
+
+      function openMenuBar() {
+        //  checks if the menu already exists and if it doesn't exist, then the function continues
         if (document.getElementById('js-menu')) return;
 
-        const navbar = document.createElement('div');
-
+        const menuBar = document.createElement('div');
         let overlay = document.getElementById('menu-overlay');
+
+        // checks if overlay already exists
         if (!overlay) {
+          // if it exists then it creates a new div
           overlay = document.createElement('div');
+
+          // the new div is given the class name of "menu-overlay"
           overlay.className = 'menu-overlay';
+
+          // the overlay is then added to the body
           document.body.appendChild(overlay);
-          overlay.style.display = 'block';
+
+          //overlay.style.display = 'block';
         }
 
-        navbar.className = 'menu';
-        navbar.id = 'js-menu';
+        // the new div is given the class name of "menu" and the ID of "js-menu" (REFER TO -> const menuBar = document.createElement('div');)
+        menuBar.className = 'menu';
+        menuBar.id = 'js-menu';
 
-        navbar.innerHTML = `
+        menuBar.innerHTML = `
         
           <div class="menu-top" id="js-menu-top">
 
@@ -763,7 +774,7 @@
               <img class="logo-image" src="/images/logo.png" alt="Game Store Logo">
             </a>
 
-            <button class="close-menu" id="js-close-menu" aria-label="close menu" type="button">
+            <button class="close-menu-btn" id="js-close-menu-btn" aria-label="close menu" type="button">
               <i class="ri-close-line"></i>
             </button>
 
@@ -781,30 +792,35 @@
           </div>
         `;
 
-        //navbar.setAttribute('aria-hidden', 'false');
+        //menuBar.setAttribute('aria-hidden', 'false');
         //document.body.setAttribute('aria-hidden', 'true');
 
+        // prevents the page from being scrolled when the menu is open
         document.body.style.overflow = 'hidden';
-        document.body.appendChild(navbar);
 
-        const links = navbar.querySelectorAll('ul li a');
+        // the menu is then added to the body
+        document.body.appendChild(menuBar);
+
+        const links = menuBar.querySelectorAll('ul li a');
+        // for each nav/menu link, when one of them is clicked the menu is closed (the function closeMenuBar() is called)
         links.forEach(link => {
-          link.addEventListener('click', closeNavbar);
+          link.addEventListener('click', closeMenuBar);
         });
       }
 
-      function closeNavbar() {
-        const navbar = document.getElementById('js-menu');
+      function closeMenuBar() {
+
+        const menuBar = document.getElementById('js-menu');
         let overlay = document.getElementById('menu-overlay');
 
-        if (navbar) {
-          document.body.removeChild(navbar);
+        if (menuBar) {
+          document.body.removeChild(menuBar);
           document.body.style.overflow = 'auto';
-          document.body.removeAttribute('aria-hidden');
+          //document.body.removeAttribute('aria-hidden');
         }
 
         if (overlay) {
-          overlay.style.display = 'none';
+          //overlay.style.display = 'none';
           overlay.remove();
         }
       }

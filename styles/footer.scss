@@ -1,35 +1,15 @@
 .footer {
-    &__wrapper {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr 1fr;
-        place-items: center;
-        gap: 3rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    place-items: center;
+    gap: 3rem;
 
-        padding: 3rem 0;
+    padding: 3rem 0;
 
-        @media (width <= 1350px) {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
-
-    &__wrapper-2 {
+    @media (width <= 1350px) {
         display: flex;
-        justify-content: center;
-        align-items: center;
-
-        padding: 1rem 0;
-
-        background-color: var(--color-black);
-
-        @media (width <= 350px) {
-            display: none;
-        }
-
-        p {
-            color: var(--color-white);
-        }
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     &__company {

@@ -25,34 +25,44 @@
         background-color: var(--bg-frosted-white);
 
         box-shadow: var(--shadow);
-    }
 
-    &__card-image {
-        border-radius: var(--border-radius) var(--border-radius) 0 0;
-        margin-bottom: 0.5rem;
+        &:hover {
+            transform: translateY(-0.5rem);
+        }
 
-        aspect-ratio: 16 / 9;
-    }
+        &-image {
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            margin-bottom: 0.5rem;
 
-    &__card-title {
-        padding-left: var(--padding);
-    }
+            aspect-ratio: 16 / 9;
 
-    &__card-rating {
-        margin-bottom: 1rem;
-        padding-left: var(--padding);
+            transition: var(--transition);
+        }
 
-        font-size: 1.5rem;
+        &:hover .featured__card-image {
+            filter: saturate(1.35);
+        }
 
-        color: var(--color-yellow);
-    }
+        &-title {
+            padding-left: var(--padding);
+        }
 
-    &__card-description {
-        padding-left: var(--padding);
+        &-rating {
+            margin-bottom: 1rem;
+            padding-left: var(--padding);
 
-        font-size: 0.8rem;
+            font-size: 1.5rem;
 
-        color: var(--color-grey);
+            color: var(--color-yellow);
+        }
+
+        &-description {
+            padding-left: var(--padding);
+
+            font-size: 0.8rem;
+
+            color: var(--color-grey);
+        }
     }
 
     .button {

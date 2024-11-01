@@ -1,10 +1,6 @@
-#reason {
-    background-color: var(--bg-frosted-black);
-}
-
 .reason {
     &__text-wrapper {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     &__description {
@@ -19,11 +15,10 @@
 
     &__card-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
-        gap: var(--gap-card-wrapper);
+        grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
 
-        @media (width < 700px) {
-            grid-template-columns: 1fr;
+        @media (width < 400px) {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
     }
 
@@ -49,7 +44,7 @@
             width: 6rem;
             height: 6rem;
 
-            fill: var(--color-orange);
+            fill: var(--color-yellow);
         }
     }
 }

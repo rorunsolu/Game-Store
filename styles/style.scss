@@ -52,6 +52,9 @@
 }
 
 html {
+    scroll-behavior: smooth;
+    scroll-padding: 5rem 0 0 0;
+
     font-size: 16px;
 }
 
@@ -62,30 +65,21 @@ body {
     font-style: normal;
     line-height: 1.5;
 
-    color: var(--color-white);
-
     min-height: 100vh;
 
-    position: relative;
+    color: var(--color-white);
 
-    &::before {
-        content: "";
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -99;
-
-        width: 100%;
-        height: 100%;
-
-        background-image: radial-gradient(
-            circle farthest-corner at 10% 46%,
-            rgba(85, 245, 221, 1) 0%,
-            rgba(4, 56, 126, 1) 19.7%,
-            rgba(2, 37, 78, 1) 100.2%
-        );
-    }
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(91, 9, 121, 1) 14%,
+        rgba(2, 0, 36, 1) 28%,
+        rgba(91, 9, 121, 1) 42%,
+        rgba(2, 0, 36, 1) 56%,
+        rgba(91, 9, 121, 1) 70%,
+        rgba(2, 0, 36, 1) 87%
+    );
 }
 
 nav {
@@ -108,7 +102,7 @@ header {
 }
 
 footer {
-    background-color: var(--bg-frosted-black);
+    background-color: var(--bg-frosted-white);
 }
 
 section {
@@ -119,6 +113,10 @@ section {
     @media (width < 600px) {
         padding: 5rem 0;
     }
+}
+
+article {
+    transition: var(--transition);
 }
 
 h1 {
@@ -169,6 +167,11 @@ h3 {
     @media (width >= 500px) {
         font-size: 1.5rem;
     }
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 button {

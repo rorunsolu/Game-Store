@@ -10,8 +10,8 @@ import '/styles/platform.scss';
 import '/styles/featured.scss';
 import '/styles/reason.scss';
 import '/styles/looking.scss';
-import '/styles/accordion.scss';
-import '/styles/opinions.scss';
+import '/styles/faq.scss';
+import '/styles/testimonials.scss';
 import '/styles/updates.scss';
 
 import '/styles/footer.scss';

@@ -16,17 +16,6 @@
     max-width: 1000px;
 
     margin: 0 auto;
-
-    top: 0.5rem;
-
-    border: var(--border-glass);
-    border-radius: var(--border-radius);
-
-    position: relative;
-
-    background-color: var(--bg-frosted-white);
-    -webkit-backdrop-filter: var(--bg-blur);
-    backdrop-filter: var(--bg-blur);
 }
 
 .image-solo {
@@ -53,7 +42,7 @@
 
     &:hover {
         color: var(--color-white);
-        background-color: var(--color-black);
+        background-color: var(--bg-frosted-white-secondary);
     }
 
     &:active {

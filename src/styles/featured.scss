@@ -26,10 +26,6 @@
 
         box-shadow: var(--shadow);
 
-        &:hover {
-            transform: translateY(-0.5rem);
-        }
-
         &-image {
             border-radius: var(--border-radius) var(--border-radius) 0 0;
             margin-bottom: 0.5rem;

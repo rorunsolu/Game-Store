@@ -1,15 +1,16 @@
 :root {
     --color-white: hsl(0, 0%, 100%);
-    --color-grey: rgba(255, 255, 255, 0.7);
-    --color-black: hsla(0, 0%, 6%);
-    --color-orange: hsl(38, 91%, 48%);
+    --color-grey: hsla(0, 0%, 100%, 0.7);
+    --color-black: hsl(0, 0%, 0%);
+    --color-orange: hsl(38, 91%, 58%);
     --color-yellow: hsl(45, 100%, 50%);
 
+    --color-black-secondary: hsl(0, 0%, 15%);
     --color-white-secondary: hsl(0, 0%, 85%);
 
-    --shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    --shadow: 0 1rem 1rem hsla(0, 0%, 0%, 0.3);
 
-    --border-glass: 1.2px solid rgba(255, 255, 255, 0.125);
+    --border-glass: 1.2px solid hsla(0, 0%, 100%, 0.125);
     --border-radius: 0.625rem;
 
     --gap-card-wrapper: 1.5rem;
@@ -21,15 +22,9 @@
     --padding-image-wrapper: 1.5rem;
     --padding-image-wrapper-sm: 1rem;
 
-    --color-white: #fff;
-    --color-black: #000;
-
-    --bg-frosted-white: rgba(193, 194, 194, 0.11);
-    --bg-frosted-black: rgba(13, 13, 14, 0.5);
-    --bg-frosted-white-secondary: rgba(193, 194, 194, 0.3);
-
-    --bg-blur: blur(20px);
-    --bg-blur-secondary: blur(5px);
+    --bg-frosted-white: hsla(0, 0%, 76%, 0.11);
+    --bg-frosted-black: hsla(0, 0%, 5%, 0.5);
+    --bg-frosted-white-secondary: hsla(0, 0%, 76%, 0.3);
 
     --font-weight-button: 500;
 
@@ -71,17 +66,7 @@ body {
 
     color: var(--color-white);
 
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        180deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(91, 9, 121, 1) 14%,
-        rgba(2, 0, 36, 1) 28%,
-        rgba(91, 9, 121, 1) 42%,
-        rgba(2, 0, 36, 1) 56%,
-        rgba(91, 9, 121, 1) 70%,
-        rgba(2, 0, 36, 1) 87%
-    );
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 nav {
@@ -104,7 +89,7 @@ header {
 }
 
 footer {
-    background-color: var(--bg-frosted-white);
+    background-color: var(--color-white);
 }
 
 section {

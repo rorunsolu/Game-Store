@@ -11,9 +11,7 @@
     right: 0;
     z-index: 999;
 
-    background-color: var(--bg-frosted-white-secondary);
-    -webkit-backdrop-filter: var(--bg-blur);
-    backdrop-filter: var(--bg-blur);
+    background-color: var(--color-white);
 
     ul {
         width: 100%;
@@ -33,7 +31,16 @@
     align-items: center;
     justify-content: flex-end;
 
-    padding: 0.75rem 0;
+    padding: 1.75rem 1rem;
+
+    @media (width < 600px) {
+        padding: 1rem 1rem;
+    }
+
+    @media (width < 400px) {
+        padding-top: 0.75rem;
+        padding-right: 0;
+    }
 }
 
 .menu-bottom {
@@ -50,7 +57,7 @@
 
         padding-left: 2rem;
 
-        color: var(--color-white);
+        color: var(--color-black);
 
         &:hover {
             color: var(--color-orange);
@@ -60,6 +67,8 @@
 
 .open-menu-btn {
     display: none;
+
+    color: var(--color-black);
 
     transition: var(--transition);
 
@@ -76,6 +85,8 @@
     margin-right: 1rem;
 
     transition: var(--transition);
+
+    color: var(--color-black);
 
     &:hover {
         color: var(--color-orange);

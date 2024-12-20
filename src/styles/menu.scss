@@ -6,8 +6,6 @@
     width: 90%;
     height: 100%;
 
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-
     position: fixed;
     top: 0;
     right: 0;
@@ -35,9 +33,7 @@
     align-items: center;
     justify-content: flex-end;
 
-    padding: 0 1rem;
-
-    height: 5.5rem;
+    padding: 0.75rem 0;
 }
 
 .menu-bottom {
@@ -57,7 +53,7 @@
         color: var(--color-white);
 
         &:hover {
-            background-color: var(--bg-frosted-white-secondary);
+            color: var(--color-orange);
         }
     }
 }
@@ -65,15 +61,25 @@
 .open-menu-btn {
     display: none;
 
+    transition: var(--transition);
+
     @media (width < 1000px) {
         display: block;
+    }
+
+    &:hover {
+        color: var(--color-orange);
     }
 }
 
 .close-menu-btn {
     margin-right: 1rem;
 
-    background-color: var(--bg-frosted-white-secondary);
+    transition: var(--transition);
+
+    &:hover {
+        color: var(--color-orange);
+    }
 }
 
 .menu-overlay {

@@ -1,20 +1,20 @@
-import '/styles/style.scss';
-import '/styles/utilities.scss';
+import './styles/style.scss';
+import './styles/utilities.scss';
 
-import '/styles/navbar.scss';
-import '/styles/header.scss';
-import '/styles/menu.scss';
+import './styles/navbar.scss';
+import './styles/header.scss';
+import './styles/menu.scss';
 
-import '/styles/slider-logo.scss';
-import '/styles/platform.scss';
-import '/styles/featured.scss';
-import '/styles/reason.scss';
-import '/styles/looking.scss';
-import '/styles/faq.scss';
-import '/styles/testimonials.scss';
-import '/styles/updates.scss';
+import './styles/slider-logo.scss';
+import './styles/platform.scss';
+import './styles/featured.scss';
+import './styles/reason.scss';
+import './styles/looking.scss';
+import './styles/faq.scss';
+import './styles/testimonials.scss';
+import './styles/updates.scss';
 
-import '/styles/footer.scss';
+import './styles/footer.scss';
 
 let openMenuBarBtn = document.getElementById('js-open-menu-btn');
 
@@ -33,7 +33,7 @@ function openMenuBar() {
           <div class="menu-top" id="js-menu-top">
 
             <button class="close-menu-btn" id="js-close-menu-btn" aria-label="close menu" type="button">
-              <i class="ri-close-line"></i>
+              <i class="ri-close-circle-line"></i>
             </button>
 
           </div>

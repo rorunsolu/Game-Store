@@ -5,10 +5,6 @@
     max-width: 1800px;
 
     position: relative;
-
-    @media (width <= 400px) {
-        width: 95%;
-    }
 }
 
 .nav-container {
@@ -20,6 +16,8 @@
 
 .image-solo {
     border-radius: var(--border-radius);
+
+    max-width: 1000px;
 
     box-shadow: var(--shadow);
 }
@@ -41,12 +39,11 @@
     background-color: var(--color-white);
 
     &:hover {
-        color: var(--color-white);
-        background-color: var(--bg-frosted-white-secondary);
+        background-color: var(--color-white-secondary);
     }
 
     &:active {
-        border: 1.5px solid var(--color-white);
+        border: 1.2px solid var(--color-black);
     }
 }
 

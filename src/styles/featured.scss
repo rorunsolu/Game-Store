@@ -1,11 +1,19 @@
 .featured {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 4rem;
 
     &__card-wrapper {
+        display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         gap: var(--gap-card-wrapper);
 
@@ -15,7 +23,12 @@
     }
 
     &__card {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
 
         border: var(--border-glass);
@@ -23,6 +36,8 @@
         padding-bottom: var(--padding);
 
         background-color: var(--bg-frosted-white);
+
+        -webkit-box-shadow: var(--shadow);
 
         box-shadow: var(--shadow);
 
@@ -32,10 +47,15 @@
 
             aspect-ratio: 16 / 9;
 
+            -webkit-transition: var(--transition);
+
+            -o-transition: var(--transition);
+
             transition: var(--transition);
         }
 
         &:hover .featured__card-image {
+            -webkit-filter: saturate(1.35);
             filter: saturate(1.35);
         }
 

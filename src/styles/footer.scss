@@ -1,4 +1,5 @@
 .footer {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     place-items: center;
@@ -7,13 +8,25 @@
     padding: 3rem 0;
 
     @media (width <= 1350px) {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
     }
 
     &__company {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         gap: 0.5rem;
 
@@ -29,7 +42,12 @@
     }
 
     ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         gap: 0.5rem;
 
@@ -43,6 +61,8 @@
     }
 
     span {
+        -webkit-transition: var(--transition);
+        -o-transition: var(--transition);
         transition: var(--transition);
 
         cursor: pointer;

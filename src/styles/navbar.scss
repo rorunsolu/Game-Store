@@ -1,9 +1,14 @@
 nav {
     height: 5rem;
     width: 100vw;
+    width: 100dvw;
 
     position: fixed;
     z-index: 60;
+
+    border-bottom: var(--border-glass);
+
+    background-color: hsla(0, 0%, 0%, 0.75);
 
     @media (width < 600px) {
         height: 3.5rem;
@@ -21,15 +26,6 @@ nav {
     -ms-flex-align: center;
     align-items: center;
 
-    position: relative;
-    top: 0.5rem;
-
-    border: var(--border-glass);
-    border-radius: var(--border-radius);
-    padding: 0 1rem;
-
-    background-color: var(--color-white);
-
     @media (width < 400px) {
         padding: 0 0.5rem;
     }
@@ -38,6 +34,8 @@ nav {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+
+        font-size: 1.25rem;
 
         @media (width < 1000px) {
             display: none;
@@ -50,7 +48,9 @@ nav {
 
         font-weight: 500;
 
-        color: var(--color-black);
+        //color: var(--color-black);
+
+        color: var(--color-white);
 
         &:hover {
             color: var(--color-orange);
@@ -65,15 +65,8 @@ nav {
     }
 
     .button {
-        background-color: var(--color-black);
-        color: var(--color-white);
-
         @media (width < 1000px) {
             display: none;
-        }
-
-        &:hover {
-            background-color: var(--color-black-secondary);
         }
     }
 }

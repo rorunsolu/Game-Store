@@ -1,3 +1,7 @@
+footer {
+    background-color: hsla(0, 0%, 0%, 0.95);
+}
+
 .footer {
     display: -ms-grid;
     display: grid;
@@ -32,11 +36,13 @@
 
         p {
             color: var(--color-black);
+            color: var(--color-white);
         }
     }
 
     &__subheader {
         color: var(--color-black);
+        color: var(--color-white);
 
         font-weight: 500;
     }
@@ -53,6 +59,7 @@
 
         a {
             color: var(--color-black);
+            color: var(--color-white);
 
             &:hover {
                 color: var(--color-orange);

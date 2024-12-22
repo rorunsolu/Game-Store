@@ -5,13 +5,13 @@
     --color-orange: hsl(38, 91%, 58%);
     --color-yellow: hsl(45, 100%, 50%);
 
-    --color-black-secondary: hsl(0, 0%, 15%);
+    --color-black-secondary: hsl(0, 0%, 10%);
     --color-white-secondary: hsl(0, 0%, 85%);
 
     --shadow: 0 1rem 1rem hsla(0, 0%, 0%, 0.3);
 
     --border-glass: 1.2px solid hsla(0, 0%, 100%, 0.125);
-    --border-radius: 0.625rem;
+    --border-radius: 0.425rem;
 
     --gap-card-wrapper: 1.5rem;
     --gap-card-wrapper-medium: 3rem;
@@ -19,12 +19,8 @@
 
     --padding: 1rem;
     --padding-button: 0.75rem 1.25rem;
-    --padding-image-wrapper: 1.5rem;
-    --padding-image-wrapper-sm: 1rem;
 
-    --bg-frosted-white: hsla(0, 0%, 76%, 0.11);
     --bg-frosted-black: hsla(0, 0%, 5%, 0.5);
-    --bg-frosted-white-secondary: hsla(0, 0%, 76%, 0.3);
 
     --font-weight-button: 500;
 
@@ -57,53 +53,17 @@ html {
 }
 
 body {
-    font-family: "Rubik", sans-serif;
+    font-family: "Urbanist", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     line-height: 1.5;
 
     min-height: 100vh;
+    min-height: 100dvh;
 
     color: var(--color-white);
-
-    background-image: -webkit-gradient(
-        linear,
-        left bottom,
-        right top,
-        from(#051937),
-        color-stop(#004d7a),
-        color-stop(#008793),
-        color-stop(#00bf72),
-        to(#a8eb12)
-    );
-
-    background-image: -o-linear-gradient(left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-}
-
-nav {
-    height: 5rem;
-    width: 100vw;
-
-    @media (width < 600px) {
-        height: 3.5rem;
-    }
-}
-
-header {
-    position: relative;
-
-    padding-top: 15rem;
-
-    @media (width < 600px) {
-        padding-top: 7rem;
-    }
-}
-
-footer {
-    background-color: var(--color-white);
+    background-color: #052537;
 }
 
 section {
@@ -222,4 +182,10 @@ img {
 svg {
     width: 1.25rem;
     height: 1.25rem;
+}
+
+.scrolled {
+    background-color: hsla(0, 0%, 0%, 0.95);
+    -webkit-box-shadow: 0px 25px 10px 0px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 0px 25px 10px 0px hsla(0, 0%, 0%, 0.1);
 }

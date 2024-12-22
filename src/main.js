@@ -1,10 +1,8 @@
 import './styles/style.scss';
 import './styles/utilities.scss';
-
 import './styles/navbar.scss';
 import './styles/header.scss';
 import './styles/menu.scss';
-
 import './styles/slider-logo.scss';
 import './styles/platform.scss';
 import './styles/featured.scss';
@@ -13,17 +11,25 @@ import './styles/looking.scss';
 import './styles/faq.scss';
 import './styles/testimonials.scss';
 import './styles/updates.scss';
-
 import './styles/footer.scss';
 
-let openMenuBarBtn = document.getElementById('js-open-menu-btn');
+const navbar = document.querySelector('nav');
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+})
+
+const openMenuBarBtn = document.getElementById('js-open-menu-btn');
 openMenuBarBtn.addEventListener('click', openMenuBar);
 
 function openMenuBar() {
     if (document.getElementById('js-menu')) return;
 
-    let menuBar = document.createElement('div');
+    const menuBar = document.createElement('div');
 
     menuBar.className = 'menu';
     menuBar.id = 'js-menu';
@@ -51,11 +57,9 @@ function openMenuBar() {
         `;
 
     document.body.style.overflow = 'hidden';
-
     document.body.appendChild(menuBar);
 
-    let closeMenuBarBtn = document.getElementById('js-close-menu-btn');
-
+    const closeMenuBarBtn = document.getElementById('js-close-menu-btn');
     closeMenuBarBtn.addEventListener('click', closeMenuBar);
 
     let links = menuBar.querySelectorAll('ul li a');

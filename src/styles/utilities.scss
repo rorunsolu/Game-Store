@@ -38,22 +38,20 @@
     padding: var(--padding-button);
 
     width: -webkit-fit-content;
-
     width: -moz-fit-content;
-
     width: fit-content;
 
     font-weight: var(--font-weight-button);
 
-    color: var(--color-black);
-    background-color: var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-black);
 
     &:hover {
-        background-color: var(--color-white-secondary);
+        background-color: var(--color-black-secondary);
     }
 
     &:active {
-        border: 1.2px solid var(--color-black);
+        border: 1.2px solid var(--color-white);
     }
 }
 

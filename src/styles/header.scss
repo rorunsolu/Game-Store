@@ -10,10 +10,6 @@ header {
 
     background: var(--color-black);
 
-    @media (width < 600px) {
-        padding-top: 7rem;
-    }
-
     &::before {
         content: "";
 

@@ -1,21 +1,15 @@
 .updates {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    gap: 4rem;
 
     &__card-wrapper {
-        display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        gap: var(--gap-card-wrapper);
+        gap: 2rem;
+
+        @media (width < 500px) {
+            gap: 3rem;
+        }
 
         @media (width < 400px) {
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -23,63 +17,18 @@
     }
 
     &__card {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
-        gap: 1rem;
 
-        border: var(--border-glass);
-        border-radius: var(--border-radius);
+        padding: 16px;
 
-        overflow: hidden;
-
-        background-color: var(--bg-frosted-black);
-
-        -webkit-box-shadow: var(--shadow);
-
-        box-shadow: var(--shadow);
-    }
-
-    &__card-image {
-        aspect-ratio: 16 / 9;
-        height: auto;
-    }
-
-    &__card-title {
-        padding: 0 var(--padding);
-    }
-
-    &__card-text {
-        padding: 0 var(--padding);
-
-        min-height: 4.5rem;
-
-        color: var(--color-grey);
-
-        overflow-y: hidden;
-
-        @media (width < 960px) {
-            min-height: 6rem;
+        @media (width < 500px) {
+            padding: 10px;
         }
-    }
 
-    &__card-bottom {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-
-        padding: 0 var(--padding);
-        padding-bottom: var(--padding);
+        @media (width < 400px) {
+            padding: 0;
+        }
     }
 
     &__card-stats {
@@ -91,7 +40,7 @@
         i {
             font-size: 1rem;
 
-            color: var(--color-yellow);
+            color: var(--txt-color-special);
         }
     }
 }

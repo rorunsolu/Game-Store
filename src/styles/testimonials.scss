@@ -1,111 +1,80 @@
+#testimonials {
+    background: hsla(0, 0%, 98%, 1);
+}
+
 .testimonials {
-    &__card-wrapper {
-        display: -ms-grid;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
-        gap: 2rem;
-
-        margin-top: 4rem;
-
-        @media (width < 1100px) {
-            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-        }
-
-        @media (width < 500px) {
-            grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-        }
-    }
-
     &__card {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        gap: 1.5rem;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 120px;
 
-        border: var(--border-glass);
-        border-radius: var(--border-radius);
-        padding: var(--padding);
-
-        -webkit-box-shadow: var(--shadow);
-
-        box-shadow: var(--shadow);
-        background-color: var(--bg-frosted-black);
-
-        &-top {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-        }
-
-        &-middle {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
+        @media (width < 1000px) {
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 40px;
         }
 
-        &-bottom {
-            display: -webkit-box;
-            display: -ms-flexbox;
+        &-left {
+            flex: 0 0 auto;
             display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
             align-items: center;
-            gap: 1rem;
+            justify-content: center;
         }
-
-        svg {
-            width: 2.5rem;
-            height: 2.5rem;
-
-            color: var(--color-yellow);
-        }
-
-        &-stars {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            gap: 0.15rem;
-
-            font-size: 1.5rem;
-
-            color: var(--color-yellow);
-        }
-
-        &-quote {
-            font-style: italic;
-        }
-
-        &-review {
-            color: var(--color-white);
-        }
-
         &-image {
-            width: 3rem;
-            height: 3rem;
+            max-width: 328px;
+            max-height: 328px;
 
-            border-radius: 50%;
+            border: var(--border);
+            border-radius: var(--border-radius);
+
+            box-shadow: var(--shadow);
+
+            @media (width < 1000px) {
+                max-width: 200px;
+                max-height: 200px;
+            }
         }
+        &-content {
+            max-width: 768px;
+        }
+        &-stars {
+            font-size: 30px;
+            color: var(--color-yellow);
 
+            margin-bottom: 20px;
+
+            @media (width < 1000px) {
+                margin-bottom: 16px;
+            }
+        }
+        &-quote {
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 44px;
+
+            color: hsla(220, 24%, 12%, 1);
+
+            @media (width < 1000px) {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+        &-bio {
+            margin-top: 32px;
+        }
         &-name {
-            font-size: 1.25rem;
-            font-weight: bold;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 28px;
 
-            color: var(--color-white);
+            color: hsla(220, 24%, 12%, 1);
+        }
+        &-job {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+
+            color: hsla(220, 8%, 35%, 1);
         }
     }
 }

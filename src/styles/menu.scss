@@ -16,7 +16,7 @@
     right: 0;
     z-index: 999;
 
-    background-color: hsla(0, 0%, 0%, 0.95);
+    background: var(--bg-color-pri);
 
     ul {
         width: 100%;
@@ -48,18 +48,7 @@
     -ms-flex-pack: end;
     justify-content: flex-end;
 
-    //padding: 1.75rem 1rem;
-
-    height: 5rem;
-
-    // @media (width < 600px) {
-    //     padding: 1rem 1rem;
-    // }
-
-    // @media (width < 400px) {
-    //     padding-top: 0.75rem;
-    //     padding-right: 0;
-    // }
+    height: 60px;
 
     @media (width < 600px) {
         height: 3.5rem;
@@ -90,44 +79,52 @@
 
         padding-left: 2rem;
 
-        color: var(--color-white);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+
+        color: var(--txt-color-base);
 
         &:hover {
-            color: var(--color-orange);
+            color: var(--txt-color-special);
         }
     }
 }
 
-.open-menu-btn {
-    display: none;
-
-    color: var(--color-white);
-
+.menu-btn {
+    border-radius: var(--border-radius);
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: hsla(220, 11%, 29%, 1);
+    background: transparent;
     -webkit-transition: var(--transition);
     -o-transition: var(--transition);
     transition: var(--transition);
+
+    i {
+        border-radius: var(--border-radius);
+        padding: 0.5rem;
+    }
+
+    &:hover {
+        color: var(--txt-color-special);
+    }
+}
+
+.open-menu-btn {
+    @extend .menu-btn;
+    display: none;
 
     @media (width < 1000px) {
         display: block;
     }
-
-    &:hover {
-        color: var(--color-orange);
-    }
 }
 
 .close-menu-btn {
+    @extend .menu-btn;
     margin-right: 1rem;
-
-    -webkit-transition: var(--transition);
-    -o-transition: var(--transition);
-    transition: var(--transition);
-
-    color: var(--color-white);
-
-    &:hover {
-        color: var(--color-orange);
-    }
 }
 
 .menu-overlay {

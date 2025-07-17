@@ -1,31 +1,19 @@
-.faq__title {
-    margin-bottom: 4rem;
+#faq {
+    background: hsl(0, 0%, 98%);
 }
 
 .accordion {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 1rem;
 
     &__item {
-        border: var(--border-glass);
         border-radius: var(--border-radius);
-
-        background-color: var(--bg-frosted-black);
     }
 
     &__header {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        align-items: center;
 
         position: relative;
 
@@ -38,15 +26,26 @@
         font-weight: 500;
         line-height: 1.25rem;
 
+        color: hsla(220, 24%, 12%, 1);
+
+        transition: var(--transition);
+
+        &:hover {
+            cursor: pointer;
+            color: var(--txt-color-special);
+        }
+
         &::after {
             content: "\002B";
 
             position: absolute;
             right: 1rem;
 
-            font-size: 2rem;
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 24px;
 
-            color: var(--color-white);
+            color: hsla(220, 24%, 12%, 1);
         }
     }
 
@@ -59,10 +58,6 @@
 
         max-height: 0;
 
-        -webkit-transition: max-height 0.2s ease-out;
-
-        -o-transition: max-height 0.2s ease-out;
-
         transition: max-height 0.2s ease-out;
     }
 
@@ -71,7 +66,10 @@
 
         padding: 0 1.25rem 1.25rem 1.25rem;
 
-        font-weight: 300;
-        line-height: 1.5rem;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        color: hsla(220, 8%, 35%, 1);
     }
 }

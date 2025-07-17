@@ -1,3 +1,7 @@
+#featured {
+    background: hsla(0, 0%, 100%);
+}
+
 .featured {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6,7 +10,6 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 4rem;
 
     &__card-wrapper {
         display: -ms-grid;
@@ -15,7 +18,11 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        gap: var(--gap-card-wrapper);
+        gap: 48px;
+
+        @media (width < 700px) {
+            gap: 40px;
+        }
 
         @media (width < 400px) {
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -23,25 +30,15 @@
     }
 
     &__card {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
 
-        border: var(--border-glass);
         border-radius: var(--border-radius);
-        padding-bottom: var(--padding);
 
-        background-color: var(--bg-frosted-black);
-
-        -webkit-box-shadow: var(--shadow);
-        box-shadow: var(--shadow);
+        background: var(--bg-color-card);
 
         &-image {
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            border-radius: 16px;
             margin-bottom: 0.5rem;
 
             aspect-ratio: 16 / 9;
@@ -59,12 +56,12 @@
         }
 
         &-title {
-            padding-left: var(--padding);
+            color: var(--txt-color-header);
+            font-size: var(--txt-size-card-header);
         }
 
         &-rating {
             margin-bottom: 1rem;
-            padding-left: var(--padding);
 
             font-size: 1.5rem;
 
@@ -72,15 +69,8 @@
         }
 
         &-description {
-            padding-left: var(--padding);
-
-            font-size: 0.8rem;
-
-            color: var(--color-grey);
+            color: var(--txt-color-subheader);
+            font-size: var(--txt-size-card-subheader);
         }
-    }
-
-    .button {
-        margin-left: 1rem;
     }
 }
